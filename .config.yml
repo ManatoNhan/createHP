@@ -1,0 +1,20 @@
+title: "DriVonacci : 戦略実装・業務改善コンサルティング"
+description: "データドリブンな業務プロセス改善で、年間400万円のコスト削減を実現"
+url: "https://drivonacci.com"
+baseurl: ""
+
+name: "植木 真人"
+role: "Business Process Optimizer"
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+header_pages:
+  - about.md
+  - services.md
+  - portfolio.md
+  - contact.md
