@@ -3,9 +3,11 @@ layout: home
 title: Home
 ---
 
-# データドリブンな業務プロセス改善で<br>年間400万円のコスト削減を実現
+# DriVonacci : 戦略実装・業務改善コンサルティング
 
-## 主な実績
+## データドリブンな業務プロセス改善で年間400万円のコスト削減を実現
+
+### 主な実績
 
 <div class="achievements">
   <div class="achievement-item">
