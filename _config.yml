@@ -1,5 +1,6 @@
-title: "DriVonacci : 戦略実装・業務改善コンサルティング"
-description: "データドリブンな業務プロセス改善で、年間400万円のコスト削減を実現"
+title: "DriVonacci"
+description: "戦略実装・業務改善コンサルティング - データドリブンな業務プロセス改善で年間400万円のコスト削減を実現"
+
 url: "https://drivonacci.com"
 baseurl: ""
 
@@ -18,3 +19,13 @@ header_pages:
   - services.md
   - portfolio.md
   - contact.md
+
+company:
+  name: "DriVonacci"
+  tagline: "戦略実装・業務改善コンサルティング"
+  
+achievements:
+  cost_reduction: "年間400万円"
+  productivity: "246%向上"
+  automation_hours: "1,356時間/年"
+
