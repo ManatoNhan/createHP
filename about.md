@@ -1,73 +1,320 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: 私について
+description: ビジネスと技術の両面から、CS/Sales/Biz Opsの業務改善を支援します
 ---
 
-## **植木 真人** - Business Process Optimizer
+<style>
+.profile-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  align-items: start;
+}
 
-ビジネスサイドでの技術活用経験により、技術実装とビジネス成果の両方を重視した業務改善・DX推進が可能です。
+@media (max-width: 768px) {
+  .profile-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
 
-### **経歴**
+.profile-image {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  padding: 40px;
+  text-align: center;
+  font-size: 8rem;
+}
 
-**WED株式会社** (2022年10月〜2025年10月)  
-CXセクション・ジェネラルマネージャー
-- 4部署を統括するプレイングマネージャーとして業務改善とAI活用推進
-- 業務改善により運営案件数170%増加、1人当たり案件処理数246%向上を実現
-- 年間1,356時間の工数削減、約400万円の人件費削減効果
+.profile-content h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #2c3e50;
+}
 
-**株式会社LabBase (旧 POL)** (2021年2月〜2022年9月)  
-カスタマーサクセス 兼 カスタマーサクセスOps
-- SQLによるデータ抽出から分析、示唆出し、提案まで一気通貫で担当
-- SQLスキル不要のダッシュボード構築により、非エンジニアのデータ活用を推進
-- データ型の標準化により、データドリブンな組織文化を醸成
-- データ抽出→スライド作成のオペレーションをGASで構築し、工数を大幅削減
+.profile-role {
+  font-size: 1.25rem;
+  color: #2c5aa0;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
 
-**PERSONNEL CONSULTANT MANPOWER (THAILAND)** (2019年5月〜2020年12月)  
-人材紹介マネージャー
-- タイ人スタッフ3名のマネジメントを担当
-- 業務効率化・DX化に注力し、アナログ業務の自動化を実施
+.profile-content p {
+  color: #7f8c8d;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
 
-**ルネサスエレクトロニクス株式会社** (2016年4月〜2019年3月)  
-アプリケーションエンジニア
-- プロジェクトマネジメント、各種データ管理、ベトナム設計支社の窓口業務
-- 業務のIT効率化、社内データベースシステムの大幅改善
+.expertise-section,
+.experience-section,
+.approach-section {
+  margin-bottom: 60px;
+}
 
-### **強み・特徴**
+.expertise-section h2,
+.experience-section h2,
+.approach-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: #2c3e50;
+  text-align: center;
+}
 
-**一気通貫の課題解決**
-課題発掘から実装、運用まで一人で完結。技術実装とビジネス戦略の両面からアプローチします。
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
 
-**ROI重視の現実的提案**
-投資回収期間3-6ヶ月を目安とした、確実に効果の出る改善提案を行います。
+.expertise-card {
+  background-color: #f8f9fa;
+  padding: 32px 24px;
+  border-radius: 8px;
+  border-left: 4px solid #2c5aa0;
+}
 
-**保守性を重視した技術選択**
-引き継ぎやすさ・保守性を重視し、持続可能な改善システムを構築します。
+.expertise-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
 
-**データドリブンな意思決定支援**
-複雑なデータ分析から経営判断に必要な示唆まで、データを活用した戦略立案をサポートします。
+.expertise-card ul {
+  list-style: none;
+  padding: 0;
+}
 
-### **技術スタック**
+.expertise-card li {
+  color: #7f8c8d;
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
 
-**開発・自動化**
-- JavaScript/Google Apps Script
-- Python/FastAPI
-- API連携（Salesforce、MoneyForward、Gmail等）
+.expertise-card li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
 
-**データ・分析**
-- SQL（複雑クエリ設計・大規模データ処理）
-- Metabase、Redash、BigQuery、Notion
-- ダッシュボード構築・可視化
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-**AI活用**
-- Vertex AI（Gemini 1.5 Pro）活用
-- AI支援開発フロー構築
+.timeline-item {
+  padding-left: 40px;
+  border-left: 2px solid #e1e8ed;
+  padding-bottom: 40px;
+  position: relative;
+}
 
-### **学歴**
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
 
-**富山大学大学院 理工学教育部物理学専攻** (〜2016年3月)  
-リラクサー誘電体の構造解析
+.timeline-item:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #2c5aa0;
+  border-radius: 50%;
+  position: absolute;
+  left: -9px;
+  top: 0;
+}
 
----
+.timeline-year {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #2c5aa0;
+  margin-bottom: 8px;
+}
 
-技術的な実装力とビジネス理解を両立させ、本質的な課題解決を提供します。
+.timeline-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.timeline-content p {
+  color: #7f8c8d;
+  line-height: 1.7;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.approach-card {
+  background-color: #f8f9fa;
+  padding: 40px 32px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.approach-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2c5aa0 0%, #1e3a6f 100%);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.approach-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.approach-card p {
+  color: #7f8c8d;
+  line-height: 1.7;
+}
+</style>
+
+<div class="profile-section">
+  <div class="profile-image">
+    👨‍💼
+  </div>
+  <div class="profile-content">
+    <h2>{{ site.company.full_name }}</h2>
+    <p class="profile-role">{{ site.company.role }}</p>
+    <p>
+      ビジネスサイドでの技術活用経験を活かし、CS/Sales/Biz Opsに特化した業務改善・DX推進を支援しています。
+    </p>
+    <p>
+      「技術のための技術」ではなく、<strong>ビジネス成果に直結する実装</strong>を重視。
+      年間400万円のコスト削減、生産性246%向上など、確実なROIを実現してきました。
+    </p>
+    <p>
+      技術実装とビジネス成果の両方を理解しているからこそ、
+      現場に即した実用的なソリューションを提供できます。
+    </p>
+  </div>
+</div>
+
+<div class="expertise-section">
+  <h2>専門領域</h2>
+  <div class="expertise-grid">
+    <div class="expertise-card">
+      <h3>🔧 業務自動化・効率化</h3>
+      <ul>
+        <li>レポート自動化</li>
+        <li>データ連携開発</li>
+        <li>議事録AI化</li>
+        <li>ワークフロー最適化</li>
+      </ul>
+    </div>
+    
+    <div class="expertise-card">
+      <h3>🤖 AI活用・DX推進</h3>
+      <ul>
+        <li>Claude API実装</li>
+        <li>Vertex AI活用</li>
+        <li>AI業務適用支援</li>
+        <li>デジタル変革戦略</li>
+      </ul>
+    </div>
+    
+    <div class="expertise-card">
+      <h3>📊 データ基盤構築</h3>
+      <ul>
+        <li>Salesforce連携</li>
+        <li>API開発</li>
+        <li>データ可視化</li>
+        <li>分析基盤整備</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="experience-section">
+  <h2>経歴</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-year">現在</div>
+      <div class="timeline-content">
+        <h3>DriVonacci 代表</h3>
+        <p>
+          CS/Sales/Biz Opsに特化した業務改善コンサルティング。
+          データドリブンなアプローチで、確実な成果創出を支援。
+        </p>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-year">前職</div>
+      <div class="timeline-content">
+        <h3>Biz Ops / 業務改善推進</h3>
+        <p>
+          事業部門での業務改善・自動化推進を担当。
+          年間1,356時間の工数削減、約400万円のコスト削減を実現。
+        </p>
+      </div>
+    </div>
+    
+    <div class="timeline-item">
+      <div class="timeline-year">それ以前</div>
+      <div class="timeline-content">
+        <h3>カスタマーサクセス / セールス</h3>
+        <p>
+          現場での実務経験を通じて、CS/Sales特有の課題と
+          実用的なソリューションの知見を蓄積。
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="approach-section">
+  <h2>アプローチ</h2>
+  <div class="approach-grid">
+    <div class="approach-card">
+      <div class="approach-number">1</div>
+      <h3>課題の本質を理解</h3>
+      <p>
+        表面的な問題ではなく、根本原因を特定。
+        現場へのヒアリングを通じて、真の課題を明らかにします。
+      </p>
+    </div>
+    
+    <div class="approach-card">
+      <div class="approach-number">2</div>
+      <h3>実行可能な施策を設計</h3>
+      <p>
+        理想論ではなく、現実的に実装可能な施策を提案。
+        段階的アプローチでリスクを最小化します。
+      </p>
+    </div>
+    
+    <div class="approach-card">
+      <div class="approach-number">3</div>
+      <h3>成果まで伴走</h3>
+      <p>
+        計画だけで終わらせず、実装・定着まで支援。
+        確実なROI実現を目指します。
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="cta-center" style="margin-top: 80px;">
+  <h2 style="margin-bottom: 24px;">まずはお気軽にご相談ください</h2>
+  <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">
+    無料相談を申し込む
+  </a>
+</div>
