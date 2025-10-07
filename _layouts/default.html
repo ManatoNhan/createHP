@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>{{ page.title | default: site.title }}</title>
+  
+  {% seo %}
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="{{ page.layout | default: 'default' }}">
+  
+  {% include header.html %}
+  
+  <main id="main-content" role="main">
+    {{ content }}
+  </main>
+  
+  {% include footer.html %}
+  
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  
+  {% if site.google_analytics %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+  
+</body>
+</html>
