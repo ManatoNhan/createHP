@@ -14,77 +14,132 @@ description: 業務改善とDX推進に関する情報を発信しています
   line-height: 1.8;
 }
 
-.note-embed-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 0;
-}
-
-.note-cta {
+.note-hero {
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 8px;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #00b894 0%, #00a383 100%);
+  border-radius: 12px;
   margin-bottom: 60px;
+  color: white;
 }
 
-.note-cta h2 {
-  font-size: 2rem;
+.note-hero h2 {
+  font-size: 2.5rem;
   margin-bottom: 16px;
-  color: #2c3e50;
+  color: white;
 }
 
-.note-cta p {
-  font-size: 1.125rem;
-  color: #7f8c8d;
+.note-hero p {
+  font-size: 1.25rem;
   margin-bottom: 32px;
+  opacity: 0.95;
 }
 
 .note-link {
   display: inline-block;
   padding: 16px 48px;
-  background-color: #00b894;
-  color: white;
+  background-color: white;
+  color: #00b894;
   font-size: 1.125rem;
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s;
-  box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .note-link:hover {
-  background-color: #00a383;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
-  color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: #00a383;
 }
 
-/* note埋め込みのスタイル調整 */
-.note-embed-section {
-  margin: 60px 0;
+.note-topics {
+  max-width: 900px;
+  margin: 0 auto 60px;
 }
 
-.note-embed-section h2 {
+.note-topics h3 {
   text-align: center;
-  margin-bottom: 40px;
+  font-size: 1.75rem;
+  margin-bottom: 32px;
   color: #2c3e50;
-  font-size: 2rem;
 }
 
-.note-iframe-container {
-  max-width: 800px;
-  margin: 0 auto;
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.topic-card {
+  background-color: #f8f9fa;
+  padding: 32px 24px;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s;
+  border: 2px solid transparent;
 }
 
-.note-iframe-container iframe {
-  border: 0;
-  display: block;
-  width: 100%;
-  min-height: 600px;
+.topic-card:hover {
+  transform: translateY(-4px);
+  border-color: #00b894;
+  box-shadow: 0 8px 16px rgba(0, 184, 148, 0.2);
+}
+
+.topic-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.topic-card h4 {
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.topic-card p {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.note-cta-bottom {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 60px;
+}
+
+.note-cta-bottom h3 {
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+  color: #2c3e50;
+}
+
+.note-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00b894;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #7f8c8d;
 }
 </style>
 
@@ -94,39 +149,78 @@ description: 業務改善とDX推進に関する情報を発信しています
   </p>
 </div>
 
-<div class="note-cta">
+<!-- メインCTA -->
+<div class="note-hero">
   <h2>📝 noteで記事を公開中</h2>
   <p>
     業務改善とDX推進に関する実践的なノウハウ、<br>
-    AI活用のヒント、技術トピックなどを定期的に発信しています。
+    AI活用のヒント、技術トピックなどを定期的に発信中
   </p>
   <a href="https://note.com/drivonacci" target="_blank" rel="noopener" class="note-link">
-    noteで記事を読む →
+    noteで最新記事を読む →
   </a>
 </div>
 
-<!-- note記事一覧を埋め込み -->
-<div class="note-embed-container">
-  <div class="note-embed-section">
-    <h2>最新記事</h2>
-    <div class="note-iframe-container">
-      <iframe 
-        src="https://note.com/drivonacci/embed" 
-        style="border: 0; display: block; width: 100%; min-height: 700px;"
-        scrolling="no"
-        loading="lazy">
-      </iframe>
+<!-- 記事のトピック -->
+<div class="note-topics">
+  <h3>主な発信テーマ</h3>
+  <div class="topics-grid">
+    <div class="topic-card">
+      <div class="topic-icon">🤖</div>
+      <h4>AI活用・DX推進</h4>
+      <p>Claude API、Vertex AIなどの実践的な活用方法</p>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-icon">⚡</div>
+      <h4>業務自動化</h4>
+      <p>GAS、Python、APIを使った効率化ノウハウ</p>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-icon">📊</div>
+      <h4>データ活用</h4>
+      <p>Salesforce連携、データ分析の実例</p>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-icon">💡</div>
+      <h4>CS/Sales/Biz Ops</h4>
+      <p>現場で使える業務改善のヒント</p>
     </div>
   </div>
 </div>
 
-<div class="note-embed-container">
-  <h3 style="text-align: center; margin-top: 60px; color: #7f8c8d;">
+<!-- 底部CTA -->
+<div class="note-cta-bottom">
+  <h3>最新の記事をnoteでチェック</h3>
+  
+  <div class="note-stats">
+    <div class="stat-item">
+      <div class="stat-number">📝</div>
+      <div class="stat-label">実践的なノウハウ</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">🚀</div>
+      <div class="stat-label">具体的な実装例</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">💡</div>
+      <div class="stat-label">現場で使えるヒント</div>
+    </div>
+  </div>
+  
+  <a href="https://note.com/drivonacci" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+    noteをフォローする
+  </a>
+</div>
+
+<!-- お問い合わせCTA -->
+<div style="text-align: center; margin-top: 60px;">
+  <h3 style="color: #7f8c8d; font-size: 1.125rem; margin-bottom: 24px;">
     その他のご質問やご相談がございましたら、お気軽にお問い合わせください
   </h3>
-  <div style="text-align: center; margin-top: 24px;">
-    <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline">
-      お問い合わせ
-    </a>
-  </div>
+  <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline">
+    お問い合わせ
+  </a>
 </div>
