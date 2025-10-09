@@ -14,47 +14,118 @@ description: 業務改善とDX推進に関する情報を発信しています
   line-height: 1.8;
 }
 
-.coming-soon {
+.note-embed-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.note-cta {
   text-align: center;
-  padding: 80px 20px;
-  background-color: #f8f9fa;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 8px;
+  margin-bottom: 60px;
 }
 
-.coming-soon-icon {
-  font-size: 6rem;
-  margin-bottom: 24px;
-}
-
-.coming-soon h2 {
+.note-cta h2 {
   font-size: 2rem;
   margin-bottom: 16px;
   color: #2c3e50;
 }
 
-.coming-soon p {
+.note-cta p {
   font-size: 1.125rem;
   color: #7f8c8d;
-  line-height: 1.8;
-  max-width: 600px;
-  margin: 0 auto 32px;
+  margin-bottom: 32px;
+}
+
+.note-link {
+  display: inline-block;
+  padding: 16px 48px;
+  background-color: #00b894;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+}
+
+.note-link:hover {
+  background-color: #00a383;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+  color: white;
+}
+
+/* note埋め込みのスタイル調整 */
+.note-embed {
+  margin: 40px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 </style>
 
 <div class="blog-intro">
   <p>
-    業務改善、AI活用、DX推進に関する実践的な情報を発信しています。
+    業務改善、AI活用、DX推進に関する実践的な情報を<strong>note</strong>で発信しています。
   </p>
 </div>
 
-<div class="coming-soon">
-  <div class="coming-soon-icon">🚧</div>
-  <h2>ブログ記事を準備中です</h2>
+<div class="note-cta">
+  <h2>📝 noteで記事を公開中</h2>
   <p>
-    業務改善とDX推進に関する実践的な情報を発信予定です。<br>
-    公開までもう少々お待ちください。
+    業務改善とDX推進に関する実践的なノウハウ、<br>
+    AI活用のヒント、技術トピックなどを定期的に発信しています。
   </p>
-  <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">
-    お問い合わせ
+  <a href="https://note.com/YOUR_NOTE_USERNAME" target="_blank" rel="noopener" class="note-link">
+    noteで記事を読む →
   </a>
+</div>
+
+<!-- オプション: note記事を直接埋め込む場合 -->
+<!-- 
+<div class="note-embed-container">
+  <h2 style="text-align: center; margin-bottom: 40px; color: #2c3e50;">最新記事</h2>
+  
+  <div class="note-embed">
+    ここにnoteの埋め込みコードを貼り付けてください
+    例:
+    <iframe class="note-embed" src="https://note.com/embed/notes/YOUR_NOTE_ID" style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe>
+  </div>
+</div>
+-->
+
+<div class="note-embed-container">
+  <h3 style="text-align: center; margin-top: 60px; color: #7f8c8d;">
+    その他のご質問やご相談がございましたら、お気軽にお問い合わせください
+  </h3>
+  <div style="text-align: center; margin-top: 24px;">
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline">
+      お問い合わせ
+    </a>
+  </div>
 </div>
