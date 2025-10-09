@@ -5,6 +5,15 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
 ---
 
 <style>
+/* 全体の中央寄せを強制 */
+.container {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
 /* ヒーローセクション */
 .hero {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -16,8 +25,6 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   grid-template-columns: 1.2fr 0.8fr;
   gap: 60px;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -27,6 +34,10 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   .hero .container {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
@@ -50,7 +61,6 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
 
 .hero-title .highlight {
   color: #2c5aa0;
-  position: relative;
 }
 
 .hero-subtitle {
@@ -125,6 +135,7 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   font-size: 1.25rem;
   margin-bottom: 12px;
   color: #2c3e50;
+  font-weight: 700;
 }
 
 .problem-card p {
@@ -141,7 +152,8 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   border-left: 4px solid #2c5aa0;
   border-radius: 4px;
   max-width: 800px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .problem-solution .lead {
@@ -160,7 +172,8 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 32px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .achievement-item {
@@ -228,6 +241,7 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   font-size: 1.5rem;
   margin-bottom: 16px;
   color: #2c3e50;
+  font-weight: 700;
 }
 
 .service-card p {
@@ -243,7 +257,8 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
 
 .features-list {
   max-width: 900px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature-item {
@@ -296,6 +311,7 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   font-size: 1.5rem;
   margin-bottom: 12px;
   color: #2c3e50;
+  font-weight: 700;
 }
 
 .feature-content p {
@@ -314,11 +330,13 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
 .cta-box {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-box h2 {
   font-size: 2.25rem;
+  font-weight: 700;
   margin-bottom: 16px;
   color: #ffffff;
 }
@@ -355,7 +373,8 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
   max-width: 900px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tech-item {
@@ -373,6 +392,7 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
 
 .tech-item h4 {
   font-size: 1.125rem;
+  font-weight: 600;
   margin-bottom: 8px;
   color: #2c3e50;
 }
