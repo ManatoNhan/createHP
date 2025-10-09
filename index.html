@@ -149,18 +149,25 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   margin: 0;
 }
 
-/* 実績セクション */
+/* 実績セクション - 2x2グリッド */
 .achievements-section {
   background-color: #f8f9fa;
 }
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  max-width: 1000px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
 }
 
 .achievement-item {
@@ -350,18 +357,25 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
   margin: 0;
 }
 
-/* 技術スタック */
+/* 技術スタック - 2x2グリッド */
 .tech-stack {
   background-color: #ffffff;
 }
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  max-width: 900px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
 }
 
 .tech-item {
@@ -391,7 +405,7 @@ description: CS/Sales/Biz Opsに特化した業務改善と戦略実装。デー
 }
 </style>
 
-<!-- ヒーローセクション -->
+<!-- ヒーローセクション -->(以下のHTMLは変更なし)
 <section class="hero">
   <div class="container">
     <div class="hero-content">
