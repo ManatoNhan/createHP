@@ -61,31 +61,30 @@ description: 業務改善とDX推進に関する情報を発信しています
 }
 
 /* note埋め込みのスタイル調整 */
-.note-embed {
-  margin: 40px 0;
+.note-embed-section {
+  margin: 60px 0;
+}
+
+.note-embed-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  font-size: 2rem;
+}
+
+.note-iframe-container {
+  max-width: 800px;
+  margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
-  margin-top: 40px;
-}
-
-.blog-card {
-  background-color: #ffffff;
-  border: 1px solid #e1e8ed;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.blog-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+.note-iframe-container iframe {
+  border: 0;
+  display: block;
+  width: 100%;
+  min-height: 600px;
 }
 </style>
 
@@ -101,23 +100,25 @@ description: 業務改善とDX推進に関する情報を発信しています
     業務改善とDX推進に関する実践的なノウハウ、<br>
     AI活用のヒント、技術トピックなどを定期的に発信しています。
   </p>
-  <a href="https://note.com/YOUR_NOTE_USERNAME" target="_blank" rel="noopener" class="note-link">
+  <a href="https://note.com/drivonacci" target="_blank" rel="noopener" class="note-link">
     noteで記事を読む →
   </a>
 </div>
 
-<!-- オプション: note記事を直接埋め込む場合 -->
-<!-- 
+<!-- note記事一覧を埋め込み -->
 <div class="note-embed-container">
-  <h2 style="text-align: center; margin-bottom: 40px; color: #2c3e50;">最新記事</h2>
-  
-  <div class="note-embed">
-    ここにnoteの埋め込みコードを貼り付けてください
-    例:
-    <iframe class="note-embed" src="https://note.com/embed/notes/YOUR_NOTE_ID" style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe>
+  <div class="note-embed-section">
+    <h2>最新記事</h2>
+    <div class="note-iframe-container">
+      <iframe 
+        src="https://note.com/drivonacci/embed" 
+        style="border: 0; display: block; width: 100%; min-height: 700px;"
+        scrolling="no"
+        loading="lazy">
+      </iframe>
+    </div>
   </div>
 </div>
--->
 
 <div class="note-embed-container">
   <h3 style="text-align: center; margin-top: 60px; color: #7f8c8d;">
