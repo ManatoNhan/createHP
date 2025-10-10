@@ -1,31 +1,88 @@
-title: "DriVonacci"
-description: "戦略実装・業務改善コンサルティング - データドリブンな業務プロセス改善で年間400万円のコスト削減を実現"
+# サイト基本情報
+title: "DriVonacci | 戦略実装・業務改善コンサルティング"
+description: "CS/Sales/Biz Opsに特化した業務改善と戦略実装の専門家。現場に寄り添い、データドリブンな実行可能な施策で確実な成果を実現します。"
+author: "植木 真人"
+email: "contact@drivonacci.com"
+phone: "お問い合わせフォームよりご連絡ください"
 
-url: "https://drivonacci.com"
+# URL設定
 baseurl: ""
+url: "https://drivonacci.com"
 
-name: "植木 真人"
-role: "Business Process Optimizer"
-
+# ビルド設定
 markdown: kramdown
-theme: minima
+permalink: /blog/:year/:month/:day/:title/
+timezone: Asia/Tokyo
+
+# プラグイン
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
 
-header_pages:
-  - about.md
-  - services.md
-  - portfolio.md
-  - contact.md
+# ブログページネーション
+paginate: 6
+paginate_path: "/blog/page:num/"
 
+# コレクション（サービス・事例用）
+collections:
+  services:
+    output: true
+    permalink: /services/:name/
+  case_studies:
+    output: true
+    permalink: /case-studies/:name/
+
+# デフォルト設定
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "植木 真人"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: ""
+      type: "case_studies"
+    values:
+      layout: "case-study"
+
+# 会社情報
 company:
   name: "DriVonacci"
   tagline: "戦略実装・業務改善コンサルティング"
-  
+  full_name: "植木 真人"
+  role: "Business Process Optimizer"
+  specialization: "CS/Sales/Biz Ops特化"
+
+# 実績数値
 achievements:
   cost_reduction: "年間400万円"
   productivity: "246%向上"
   automation_hours: "1,356時間/年"
+  roi_period: "3-4ヶ月"
 
+# SEO設定
+social:
+  name: "植木 真人"
+  links:
+    - https://www.linkedin.com/in/yourprofile
+    - https://twitter.com/yourhandle
+
+# Google Analytics（必要に応じて設定）
+# google_analytics: "G-XXXXXXXXXX"
+
+# 除外設定
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .DS_Store
+  - README.md

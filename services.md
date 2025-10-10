@@ -1,78 +1,359 @@
 ---
 layout: page
-title: Services
-permalink: /services/
+title: サービス内容
+description: CS/Sales/Biz Opsの業務改善と戦略実装を、一貫してサポートします
 ---
 
-# サービス内容
+<style>
+.service-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 1.125rem;
+  color: #7f8c8d;
+  line-height: 1.8;
+}
 
-DriVonacci では、CS/Sales/Biz Ops に特化した戦略実装・業務改善コンサルティングを提供します。データドリブンなアプローチで、投資回収期間3-4ヶ月を目指した実用的な改善を実現します。
+.services-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-## 提供サービス
+.service-item {
+  background-color: #f8f9fa;
+  padding: 48px 40px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  border-left: 6px solid #2c5aa0;
+}
 
-### 1. 業務プロセス自動化
-**実績**: 年間1,356時間の工数削減、約400万円の人件費削減効果
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
 
-**主な対象業務**:
-- レポート作成の自動化（月20時間→0時間の実績）
-- システム間データ連携・API開発（月13時間削減の実績）
-- 会議議事録のAI自動生成（月80時間削減の実績）
+.service-icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+}
 
-**技術対応範囲**:
-- JavaScript/Google Apps Script
-- Python/FastAPI
-- Salesforce・各種SaaS連携
-- AI活用（Claude API、Vertex AI等）
+.service-header h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+}
 
-### 2. データ活用基盤構築
-**実績**: 1人当たり案件処理数246%向上
+.service-description {
+  color: #7f8c8d;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+}
 
-**提供内容**:
-- リアルタイムダッシュボード構築
-- 複雑なデータ抽出・分析（500-800行規模のSQL実装経験）
-- 意思決定に必要な事業数値の可視化
-- 戦略立案に活用可能な分析基盤設計
+.service-details h3 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
 
-### 3. 組織・プロセス改善
-**実績**: 5名→1.5名体制で業務量170%増を実現
+.service-details ul {
+  list-style: none;
+  padding: 0;
+}
 
-**提供内容**:
-- 生産性向上施策の立案・実行
-- 価格戦略の見直し・収益改善
-- チーム配置の最適化
-- 業務プロセスの標準化
+.service-details li {
+  padding: 12px 0;
+  padding-left: 32px;
+  position: relative;
+  color: #7f8c8d;
+  line-height: 1.7;
+}
 
-## 料金体系
+.service-details li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
 
-### 現状分析
-**無料**
-- 業務プロセスの現状把握
-- 改善ポイントの特定
-- 効果試算・ROI計算
+.service-outcomes {
+  background-color: #e8f2fc;
+  padding: 24px;
+  border-radius: 4px;
+  margin-top: 24px;
+}
 
-### 改善提案書作成
-**10-30万円**
-- 具体的な改善施策の立案
-- 実装スケジュール作成
-- 投資回収シミュレーション
+.service-outcomes h4 {
+  color: #2c5aa0;
+  margin-bottom: 12px;
+  font-size: 1.125rem;
+}
 
-### 実装・運用支援
-**30-100万円**
-- システム開発・設定
-- 運用体制の構築
-- 効果測定・改善
+.service-outcomes p {
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.7;
+}
 
-## 依頼の流れ
+.pricing-section {
+  background-color: #f8f9fa;
+  padding: 48px;
+  border-radius: 8px;
+  margin: 60px 0;
+  text-align: center;
+}
 
-1. **無料相談・現状分析**
-   まずは現状の課題をお聞かせください
+.pricing-section h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #2c3e50;
+}
 
-2. **改善提案書の作成**
-   具体的な解決策と効果を提案します
+.pricing-section p {
+  font-size: 1.125rem;
+  color: #7f8c8d;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
 
-3. **実装・運用サポート**
-   課題解決から運用まで一気通貫でサポート
+.process-section {
+  margin: 60px 0;
+}
 
----
+.process-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 48px;
+  color: #2c3e50;
+}
 
-まずは無料の現状分析からお気軽にご相談ください。
+/* 1行（1x4）レイアウト */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+  background-color: #f8f9fa;
+  padding: 32px 24px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.process-step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.process-step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2c5aa0 0%, #1e3a6f 100%);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.process-step h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.process-step p {
+  color: #7f8c8d;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+</style>
+
+<div class="service-intro">
+  <p>
+    CS/Sales/Biz Opsに特化した業務改善と戦略実装を、戦略立案から実装・定着まで一貫してサポート。
+    データドリブンなアプローチで、確実な成果を実現します。
+  </p>
+</div>
+
+<div class="services-list">
+  
+  <div class="service-item">
+    <div class="service-header">
+      <div class="service-icon">🔧</div>
+      <h2>業務自動化・効率化</h2>
+    </div>
+    
+    <p class="service-description">
+      定型業務の自動化により、工数削減とヒューマンエラー防止を実現。
+      月20時間以上の工数削減実績があります。
+    </p>
+    
+    <div class="service-details">
+      <h3>提供内容</h3>
+      <ul>
+        <li>レポート作成の自動化（月20時間→0時間）</li>
+        <li>データ連携・API開発（Salesforce、各種SaaS）</li>
+        <li>議事録AI化（月80時間削減）</li>
+        <li>ワークフロー設計・最適化</li>
+        <li>Google Apps Script / Python開発</li>
+      </ul>
+    </div>
+    
+    <div class="service-outcomes">
+      <h4>期待される成果</h4>
+      <p>
+        ✓ 月20-80時間の工数削減<br>
+        ✓ ヒューマンエラーの撲滅<br>
+        ✓ データ精度の向上<br>
+        ✓ コア業務への集中
+      </p>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <div class="service-header">
+      <div class="service-icon">🤖</div>
+      <h2>AI活用・DX推進</h2>
+    </div>
+    
+    <p class="service-description">
+      Claude API、Vertex AIを活用し、業務改善を加速。
+      AIを「使う」だけでなく、実務に落とし込み、確実な成果を創出します。
+    </p>
+    
+    <div class="service-details">
+      <h3>提供内容</h3>
+      <ul>
+        <li>Claude API実装・活用支援</li>
+        <li>Vertex AI導入・運用設計</li>
+        <li>AI活用戦略策定</li>
+        <li>カスタムAIソリューション開発</li>
+        <li>社内AI活用推進・教育</li>
+      </ul>
+    </div>
+    
+    <div class="service-outcomes">
+      <h4>期待される成果</h4>
+      <p>
+        ✓ AI業務適用の加速<br>
+        ✓ 意思決定スピード向上<br>
+        ✓ 顧客対応品質の向上<br>
+        ✓ 競争優位性の確立
+      </p>
+    </div>
+  </div>
+  
+  <div class="service-item">
+    <div class="service-header">
+      <div class="service-icon">📊</div>
+      <h2>データ基盤構築</h2>
+    </div>
+    
+    <p class="service-description">
+      Salesforce連携、API開発、データ可視化まで。
+      意思決定を支えるデータ基盤を構築します。
+    </p>
+    
+    <div class="service-details">
+      <h3>提供内容</h3>
+      <ul>
+        <li>Salesforce連携・カスタマイズ</li>
+        <li>API設計・開発（Python/FastAPI）</li>
+        <li>ダッシュボード構築</li>
+        <li>データパイプライン設計</li>
+        <li>データ分析基盤整備</li>
+      </ul>
+    </div>
+    
+    <div class="service-outcomes">
+      <h4>期待される成果</h4>
+      <p>
+        ✓ データ駆動の意思決定<br>
+        ✓ リアルタイム可視化<br>
+        ✓ 部門間データ連携<br>
+        ✓ 戦略的分析の高度化
+      </p>
+    </div>
+  </div>
+  
+</div>
+
+<div class="process-section">
+  <h2>プロジェクトの進め方</h2>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="process-step-number">1</div>
+      <h3>課題ヒアリング</h3>
+      <p>
+        現状の業務フローを詳しくヒアリング。
+        課題の本質を特定します。
+      </p>
+    </div>
+    
+    <div class="process-step">
+      <div class="process-step-number">2</div>
+      <h3>提案・設計</h3>
+      <p>
+        実行可能な施策を提案。
+        投資対効果を明確化します。
+      </p>
+    </div>
+    
+    <div class="process-step">
+      <div class="process-step-number">3</div>
+      <h3>実装・テスト</h3>
+      <p>
+        段階的に実装を進め、
+        現場での検証を重ねます。
+      </p>
+    </div>
+    
+    <div class="process-step">
+      <div class="process-step-number">4</div>
+      <h3>運用・定着</h3>
+      <p>
+        マニュアル整備と教育で
+        確実な定着を支援します。
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="pricing-section">
+  <h2>料金体系</h2>
+  <p>
+    プロジェクトの規模と期間に応じて、柔軟な料金設定をご用意しています。<br>
+    まずは無料相談で、貴社の課題とご予算をお聞かせください。
+  </p>
+  <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">
+    無料相談を申し込む
+  </a>
+</div>
