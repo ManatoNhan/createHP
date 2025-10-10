@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Portfolio</title>
+  <title>ブログ</title>
   
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Portfolio | DriVonacci 戦略実装・業務改善コンサルティング</title>
+<title>ブログ | DriVonacci 戦略実装・業務改善コンサルティング</title>
 <meta name="generator" content="Jekyll v3.9.5" />
-<meta property="og:title" content="Portfolio" />
+<meta property="og:title" content="ブログ" />
 <meta name="author" content="植木 真人" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="CS/Sales/Biz Opsに特化した業務改善と戦略実装の専門家。現場に寄り添い、データドリブンな実行可能な施策で確実な成果を実現します。" />
-<meta property="og:description" content="CS/Sales/Biz Opsに特化した業務改善と戦略実装の専門家。現場に寄り添い、データドリブンな実行可能な施策で確実な成果を実現します。" />
-<link rel="canonical" href="http://localhost:4000/portfolio/" />
-<meta property="og:url" content="http://localhost:4000/portfolio/" />
+<meta name="description" content="業務改善とDX推進に関する情報を発信しています" />
+<meta property="og:description" content="業務改善とDX推進に関する情報を発信しています" />
+<link rel="canonical" href="http://localhost:4000/blog/" />
+<meta property="og:url" content="http://localhost:4000/blog/" />
 <meta property="og:site_name" content="DriVonacci 戦略実装・業務改善コンサルティング" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Portfolio" />
+<meta property="twitter:title" content="ブログ" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"植木 真人"},"description":"CS/Sales/Biz Opsに特化した業務改善と戦略実装の専門家。現場に寄り添い、データドリブンな実行可能な施策で確実な成果を実現します。","headline":"Portfolio","url":"http://localhost:4000/portfolio/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"植木 真人"},"description":"業務改善とDX推進に関する情報を発信しています","headline":"ブログ","url":"http://localhost:4000/blog/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -95,7 +95,7 @@
           <li><a href="/services/" >サービス</a></li>
           <li><a href="/case-studies/" >導入事例</a></li>
           <li><a href="/about/" >私について</a></li>
-          <li><a href="/blog/" >ブログ</a></li>
+          <li><a href="/blog/" class="active">ブログ</a></li>
         </ul>
         
         <a href="/contact/" class="btn btn-primary">お問い合わせ</a>
@@ -110,25 +110,233 @@
   <div class="container">
     <article class="page-content">
       <header class="page-header">
-        <h1 class="page-title">Portfolio</h1>
+        <h1 class="page-title">ブログ</h1>
+        
+        <p class="page-description">業務改善とDX推進に関する情報を発信しています</p>
         
       </header>
       
       <div class="page-body">
-        <h1 id="実績ポートフォリオ">実績・ポートフォリオ</h1>
+        <style>
+.blog-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 1.125rem;
+  color: #7f8c8d;
+  line-height: 1.8;
+}
 
-<p>詳細な実績スライドは現在準備中です。</p>
+.note-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #00b894 0%, #00a383 100%);
+  border-radius: 12px;
+  margin-bottom: 60px;
+  color: white;
+}
 
-<h2 id="主要実績">主要実績</h2>
+.note-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: white;
+}
 
-<ul>
-  <li><strong>年間工数削減</strong>: 1,356時間</li>
-  <li><strong>人件費削減効果</strong>: 約400万円</li>
-  <li><strong>生産性向上</strong>: 1人当たり案件処理数246%向上</li>
-  <li><strong>投資回収期間</strong>: 3-4ヶ月</li>
-</ul>
+.note-hero p {
+  font-size: 1.25rem;
+  margin-bottom: 32px;
+  opacity: 0.95;
+}
 
-<p>近日中に詳細なケーススタディをご紹介予定です。</p>
+.note-link {
+  display: inline-block;
+  padding: 16px 48px;
+  background-color: white;
+  color: #00b894;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.note-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: #00a383;
+}
+
+.note-topics {
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.note-topics h3 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 32px;
+  color: #2c3e50;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.topic-card {
+  background-color: #f8f9fa;
+  padding: 32px 24px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+  border-color: #00b894;
+  box-shadow: 0 8px 16px rgba(0, 184, 148, 0.2);
+}
+
+.topic-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.topic-card h4 {
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.topic-card p {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.note-cta-bottom {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 60px;
+}
+
+.note-cta-bottom h3 {
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+  color: #2c3e50;
+}
+
+.note-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00b894;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+}
+</style>
+
+<div class="blog-intro">
+  <p>
+    業務改善、AI活用、DX推進に関する実践的な情報を<strong>note</strong>で発信しています。
+  </p>
+</div>
+
+<!-- メインCTA -->
+<div class="note-hero">
+  <h2>📝 noteで記事を公開中</h2>
+  <p>
+    業務改善とDX推進に関する実践的なノウハウ、<br>
+    AI活用のヒント、技術トピックなどを定期的に発信中
+  </p>
+  <a href="https://note.com/drivonacci" target="_blank" rel="noopener" class="note-link">
+    noteで最新記事を読む →
+  </a>
+</div>
+
+<!-- 記事のトピック -->
+<div class="note-topics">
+  <h3>主な発信テーマ</h3>
+  <div class="topics-grid">
+    <div class="topic-card">
+      <div class="topic-icon">🤖</div>
+      <h4>AI活用・DX推進</h4>
+      <p>Claude API、Vertex AIなどの実践的な活用方法</p>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-icon">⚡</div>
+      <h4>業務自動化</h4>
+      <p>GAS、Python、APIを使った効率化ノウハウ</p>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-icon">📊</div>
+      <h4>データ活用</h4>
+      <p>Salesforce連携、データ分析の実例</p>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-icon">💡</div>
+      <h4>CS/Sales/Biz Ops</h4>
+      <p>現場で使える業務改善のヒント</p>
+    </div>
+  </div>
+</div>
+
+<!-- 底部CTA -->
+<div class="note-cta-bottom">
+  <h3>最新の記事をnoteでチェック</h3>
+  
+  <div class="note-stats">
+    <div class="stat-item">
+      <div class="stat-number">📝</div>
+      <div class="stat-label">実践的なノウハウ</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">🚀</div>
+      <div class="stat-label">具体的な実装例</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">💡</div>
+      <div class="stat-label">現場で使えるヒント</div>
+    </div>
+  </div>
+  
+  <a href="https://note.com/drivonacci" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+    noteをフォローする
+  </a>
+</div>
+
+<!-- お問い合わせCTA -->
+<div style="text-align: center; margin-top: 60px;">
+  <h3 style="color: #7f8c8d; font-size: 1.125rem; margin-bottom: 24px;">
+    その他のご質問やご相談がございましたら、お気軽にお問い合わせください
+  </h3>
+  <a href="/contact/" class="btn btn-outline">
+    お問い合わせ
+  </a>
+</div>
 
       </div>
     </article>
