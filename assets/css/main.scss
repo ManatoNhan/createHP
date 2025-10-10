@@ -66,6 +66,9 @@ $wide: 1200px;
 
 $transition-speed: 0.3s;
 
+// ヘッダーの高さ（固定ヘッダー用）
+$header-height: 73px;
+
 // ========================================
 // ベーススタイル
 // ========================================
@@ -89,6 +92,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  // ヘッダー固定のため上部にパディング
+  padding-top: $header-height;
 }
 
 // ========================================
@@ -195,14 +200,17 @@ section {
 }
 
 // ========================================
-// ヘッダー
+// ヘッダー（固定）
 // ========================================
 
 .site-header {
   background-color: $bg-white;
   border-bottom: 1px solid $border-color;
-  position: sticky;
+  position: fixed;  // stickyから fixedに変更
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 
