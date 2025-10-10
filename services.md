@@ -133,17 +133,39 @@ description: CS/Sales/Biz Opsの業務改善と戦略実装を、一貫してサ
   color: #2c3e50;
 }
 
+/* 1行（1x4）レイアウト */
 .process-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
 }
 
 .process-step {
   text-align: center;
   position: relative;
+  background-color: #f8f9fa;
+  padding: 32px 24px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.process-step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
 .process-step-number {
@@ -164,6 +186,7 @@ description: CS/Sales/Biz Opsの業務改善と戦略実装を、一貫してサ
   font-size: 1.25rem;
   margin-bottom: 12px;
   color: #2c3e50;
+  font-weight: 700;
 }
 
 .process-step p {
