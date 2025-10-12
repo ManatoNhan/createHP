@@ -219,6 +219,18 @@
 .problem-icon {
   font-size: 3rem;
   margin-bottom: 16px;
+  height: 100px;  /* 高さを固定 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.problem-icon img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;  /* アスペクト比を維持 */
 }
 
 .problem-card h3 {
@@ -530,7 +542,7 @@
       </div>
     </div>
     <div class="hero-image">
-      📊
+      <img src="/assets/images/hero/tribonacci.svg" alt="Tribonacci">
     </div>
   </div>
 </section>
@@ -542,25 +554,33 @@
     
     <div class="problem-grid">
       <div class="problem-card">
-        <div class="problem-icon">📊</div>
+        <div class="problem-icon">
+          <img src="/assets/images/icons/downGraph.svg" alt="DownGraph">
+        </div>
         <h3>業務が非効率</h3>
         <p>手作業が多く、属人化が進んでいる</p>
       </div>
       
       <div class="problem-card">
-        <div class="problem-icon">⏰</div>
+        <div class="problem-icon">
+           <img src="/assets/images/icons/notTime.svg" alt="noTime">
+        </div>
         <h3>時間が足りない</h3>
         <p>定型業務に時間を取られ、本質的な仕事ができない</p>
       </div>
       
       <div class="problem-card">
-        <div class="problem-icon">💰</div>
+        <div class="problem-icon">
+          <img src="/assets/images/icons/cost.svg" alt="cost">
+        </div>
         <h3>コストが高い</h3>
         <p>人件費が膨らみ、ROIが見えない</p>
       </div>
       
       <div class="problem-card">
-        <div class="problem-icon">🎯</div>
+        <div class="problem-icon">
+          <img src="/assets/images/icons/PDCA.svg" alt="PDCA">
+        </div>
         <h3>戦略が実行されない</h3>
         <p>良いアイデアはあるが、実装に移せない</p>
       </div>
