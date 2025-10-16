@@ -13,8 +13,8 @@
 <meta property="og:title" content="ホーム" />
 <meta name="author" content="植木 真人" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="CS/Sales/Biz Opsに特化した業務改善と戦略実装。データドリブンな実行可能な施策で、確実な成果を実現します。" />
-<meta property="og:description" content="CS/Sales/Biz Opsに特化した業務改善と戦略実装。データドリブンな実行可能な施策で、確実な成果を実現します。" />
+<meta name="description" content="雑務や調整に追われず、本来やるべき仕事に集中できる環境を。業務自動化とプロセス最適化で、コア業務への集中を実現します。" />
+<meta property="og:description" content="雑務や調整に追われず、本来やるべき仕事に集中できる環境を。業務自動化とプロセス最適化で、コア業務への集中を実現します。" />
 <link rel="canonical" href="http://localhost:4000/" />
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="DriVonacci 戦略実装・業務改善コンサルティング" />
@@ -22,53 +22,19 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="ホーム" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"植木 真人"},"description":"CS/Sales/Biz Opsに特化した業務改善と戦略実装。データドリブンな実行可能な施策で、確実な成果を実現します。","headline":"ホーム","name":"植木 真人","sameAs":["https://www.linkedin.com/in/yourprofile","https://twitter.com/yourhandle"],"url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"植木 真人"},"description":"雑務や調整に追われず、本来やるべき仕事に集中できる環境を。業務自動化とプロセス最適化で、コア業務への集中を実現します。","headline":"ホーム","name":"植木 真人","sameAs":["https://www.linkedin.com/in/yourprofile","https://twitter.com/yourhandle"],"url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   
-  <!-- Styles -->
+  <!-- Styles - 直接パスを指定 -->
   <link rel="stylesheet" href="/assets/css/main.css">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  
-  <style>
-    /* 強制的な中央寄せ */
-    html {
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100%;
-      overflow-x: hidden;
-    }
-    
-    body {
-      margin: 0 auto !important;
-      padding: 0 !important;
-      max-width: 100% !important;
-      overflow-x: hidden;
-    }
-    
-    /* コンテナの中央寄せを強制 */
-    .container {
-      max-width: 1200px !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      padding-left: 20px !important;
-      padding-right: 20px !important;
-      width: 100% !important;
-    }
-    
-    @media (max-width: 768px) {
-      .container {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-      }
-    }
-  </style>
 </head>
 <body class="home">
   
@@ -106,15 +72,14 @@
 </header>
   
   <main id="main-content" role="main">
-    <div class="container">
-  <style>
+    <style>
 /* ヒーローセクション */
 .hero {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 150px 0 50px;
+  padding: 100px 0 80px;
 }
 
-.hero .container {
+.hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 60px;
@@ -123,9 +88,9 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 60px 0;
+    padding: 80px 0 60px;
   }
-  .hero .container {
+  .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -157,13 +122,51 @@
   font-size: 1.25rem;
   color: #7f8c8d;
   margin-bottom: 32px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 @media (max-width: 768px) {
   .hero-subtitle {
     font-size: 1.125rem;
   }
+}
+
+/* 実績の数字をヒーローに */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.stat-item {
+  text-align: center;
+  padding: 16px 8px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e879b9;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #7f8c8d;
 }
 
 .hero-cta {
@@ -182,33 +185,175 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 8rem;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 時間の無駄セクション */
+.time-waste {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.waste-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+.waste-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 768px) {
-  .hero-image {
-    font-size: 6rem;
+  .waste-intro h2 {
+    font-size: 2rem;
+  }
+}
+
+.waste-intro p {
+  font-size: 1.125rem;
+  color: #7f8c8d;
+  line-height: 1.8;
+}
+
+.waste-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.waste-card {
+  background-color: #ffffff;
+  padding: 32px 24px;
+  border-radius: 8px;
+  border-left: 4px solid #2c5aa0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.waste-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.waste-time {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c5aa0;
+  margin-bottom: 8px;
+}
+
+.waste-task {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.waste-desc {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.total-waste {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #2c5aa0 0%, #1e3a6f 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 8px 32px rgba(44, 90, 160, 0.3);
+}
+
+.total-waste-value {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .total-waste-value {
+    font-size: 2rem;
+  }
+}
+
+.total-waste-label {
+  font-size: 1.25rem;
+  opacity: 0.95;
+}
+
+/* 解決策セクション */
+.solution-section {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.solution-box {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 48px;
+  background: linear-gradient(135deg, #2c5aa0 0%, #1e3a6f 100%);
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.solution-box h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .solution-box h2 {
+    font-size: 2rem;
+  }
+}
+
+.solution-box p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .solution-box p {
+    font-size: 1.125rem;
   }
 }
 
 /* 課題セクション */
 .problems {
-  background-color: #ffffff;
+  background-color: #f8f9fa;
+  padding: 80px 0;
 }
 
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 32px;
-  margin-bottom: 48px;
 }
 
 .problem-card {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   padding: 32px 24px;
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .problem-card:hover {
@@ -217,12 +362,11 @@
 }
 
 .problem-icon {
-  font-size: 3rem;
-  margin-bottom: 16px;
-  height: 100px;  /* 高さを固定 */
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
 }
 
 .problem-icon img {
@@ -230,7 +374,7 @@
   max-height: 100px;
   width: auto;
   height: auto;
-  object-fit: contain;  /* アスペクト比を維持 */
+  object-fit: contain;
 }
 
 .problem-card h3 {
@@ -247,78 +391,10 @@
   margin: 0;
 }
 
-.problem-solution {
-  text-align: center;
-  padding: 32px;
-  background-color: #e8f2fc;
-  border-left: 4px solid #2c5aa0;
-  border-radius: 4px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.problem-solution .lead {
-  font-size: 1.25rem;
-  color: #2c3e50;
-  margin: 0;
-}
-
-/* 実績セクション - 2x2グリッド */
-.achievements-section {
-  background-color: #f8f9fa;
-}
-
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 768px) {
-  .achievements-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-  }
-}
-
-.achievement-item {
-  background-color: #ffffff;
-  padding: 40px 24px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-
-.achievement-item:hover {
-  transform: translateY(-8px);
-}
-
-.achievement-icon {
-  font-size: 3rem;
-  margin-bottom: 16px;
-}
-
-.achievement-value {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #27ae60;
-  margin-bottom: 8px;
-}
-
-.achievement-label {
-  color: #7f8c8d;
-  font-size: 0.95rem;
-  margin: 0;
-}
-
 /* サービス概要 */
 .services-overview {
   background-color: #ffffff;
+  padding: 80px 0;
 }
 
 .services-grid {
@@ -359,81 +435,11 @@
   line-height: 1.7;
 }
 
-/* 強み・特徴 */
-.features {
-  background-color: #f8f9fa;
-}
-
-.features-list {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.feature-item {
-  display: flex;
-  gap: 32px;
-  margin-bottom: 48px;
-  align-items: flex-start;
-}
-
-@media (max-width: 768px) {
-  .feature-item {
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-.feature-item:last-child {
-  margin-bottom: 0;
-}
-
-.feature-number {
-  flex-shrink: 0;
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #2c5aa0 0%, #1e3a6f 100%);
-  color: #ffffff;
-  font-size: 1.75rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-  .feature-number {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-  }
-}
-
-.feature-content {
-  flex: 1;
-}
-
-.feature-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  color: #2c3e50;
-  font-weight: 700;
-}
-
-.feature-content p {
-  color: #7f8c8d;
-  line-height: 1.8;
-  font-size: 1.05rem;
-  margin: 0;
-}
-
 /* CTAセクション */
 .cta-section {
   background: linear-gradient(135deg, #2c5aa0 0%, #1e3a6f 100%);
   color: #ffffff;
+  padding: 80px 0;
 }
 
 .cta-box {
@@ -471,78 +477,106 @@
   opacity: 0.8;
   margin: 0;
 }
-
-/* 技術スタック - 2x2グリッド */
-.tech-stack {
-  background-color: #ffffff;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 768px) {
-  .tech-grid {
-    grid-template-columns: 1fr;
-    max-width: 300px;
-  }
-}
-
-.tech-item {
-  background-color: #f8f9fa;
-  padding: 24px 20px;
-  border-radius: 8px;
-  text-align: center;
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-}
-
-.tech-item:hover {
-  border-color: #2c5aa0;
-}
-
-.tech-item h4 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #2c3e50;
-}
-
-.tech-item p {
-  font-size: 0.875rem;
-  color: #7f8c8d;
-  margin: 0;
-}
 </style>
 
 <!-- ヒーローセクション -->
 <section class="hero">
   <div class="container">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        CS/Sales/Biz Opsに特化した<br>
-        <span class="highlight">データドリブン業務改善</span>
-      </h1>
-      <p class="hero-subtitle">
-        現場に寄り添い、実行可能な施策で確実な成果を実現。<br>
-        年間400万円のコスト削減、生産性246%向上の実績。
-      </p>
-      <div class="hero-cta">
-        <a href="/contact/" class="btn btn-primary btn-lg">
-          無料相談を申し込む
-        </a>
-        <a href="/services/" class="btn btn-secondary btn-lg">
-          サービスを見る
-        </a>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          本来やるべき仕事に<br>
+          <span class="highlight">集中できる環境</span>を作ります
+        </h1>
+        <p class="hero-subtitle">
+          レポート作成、手入力、調整業務…<br>
+          雑務に追われて、コア業務に時間が使えていませんか？<br>
+          業務自動化とプロセス最適化で、確実に時間を生み出します。
+        </p>
+        
+        <!-- 実績の数字 -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value">1,356時間</span>
+            <span class="stat-label">年間工数削減</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">約400万円</span>
+            <span class="stat-label">コスト削減効果</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">3-4ヶ月</span>
+            <span class="stat-label">投資回収期間</span>
+          </div>
+        </div>
+        
+        <div class="hero-cta">
+          <a href="/contact/" class="btn btn-primary btn-lg">
+            無料相談を申し込む
+          </a>
+          <a href="/services/" class="btn btn-secondary btn-lg">
+            サービスを見る
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/assets/images/hero/tribonacci.svg" alt="業務改善イメージ">
       </div>
     </div>
-    <div class="hero-image">
-      <img src="/assets/images/hero/tribonacci.svg" alt="Tribonacci">
+  </div>
+</section>
+
+<!-- 時間の無駄セクション -->
+<section class="time-waste">
+  <div class="container">
+    <div class="waste-intro">
+      <h2>月に何時間、こんな作業に使っていますか？</h2>
+      <p>
+        これらは全て「自動化できる作業」です。<br>
+        その時間を、本来の仕事に使いませんか？
+      </p>
+    </div>
+    
+    <div class="waste-grid">
+      <div class="waste-card">
+        <div class="waste-time">20時間/月</div>
+        <div class="waste-task">レポート作成</div>
+        <p class="waste-desc">手動でデータを集計し、資料を作成</p>
+      </div>
+      
+      <div class="waste-card">
+        <div class="waste-time">13時間/月</div>
+        <div class="waste-task">データ入力</div>
+        <p class="waste-desc">同じ内容を複数ツールに手入力</p>
+      </div>
+      
+      <div class="waste-card">
+        <div class="waste-time">80時間/月</div>
+        <div class="waste-task">議事録作成</div>
+        <p class="waste-desc">会議後に議事録を手作業で整理</p>
+      </div>
+    </div>
+    
+    <div class="total-waste">
+      <div class="total-waste-value">年間1,356時間</div>
+      <div class="total-waste-label">これだけの時間を、コア業務に使えます</div>
+    </div>
+  </div>
+</section>
+
+<!-- 解決策セクション -->
+<section class="solution-section">
+  <div class="container">
+    <div class="solution-box">
+      <h2>自動化・最適化で、本来の仕事に集中</h2>
+      <p>
+        定型作業は自動化。調整業務は効率化。データは一元管理。<br>
+        あなたとチームが「本当にやるべきこと」に時間を使えるように、<br>
+        業務環境を根本から変えます。
+      </p>
+      <a href="/services/" class="btn btn-primary btn-lg">
+        どう変わるか見る
+      </a>
     </div>
   </div>
 </section>
@@ -550,79 +584,42 @@
 <!-- 課題セクション -->
 <section class="problems">
   <div class="container">
-    <h2 class="section-title">こんなお悩みはありませんか？</h2>
+    <h2 class="section-title">よくあるコア業務への障壁</h2>
+    <p class="section-intro">
+      これらの問題、1つでも当てはまりませんか？
+    </p>
     
     <div class="problem-grid">
       <div class="problem-card">
         <div class="problem-icon">
-          <img src="/assets/images/icons/downGraph.svg" alt="DownGraph">
+          <img src="/assets/images/icons/downGraph.svg" alt="非効率">
         </div>
-        <h3>業務が非効率</h3>
-        <p>手作業が多く、属人化が進んでいる</p>
+        <h3>定型作業に追われる</h3>
+        <p>レポート作成や手入力で、戦略的な仕事ができない</p>
       </div>
       
       <div class="problem-card">
         <div class="problem-icon">
-           <img src="/assets/images/icons/notTime.svg" alt="noTime">
+          <img src="/assets/images/icons/notTime.svg" alt="時間不足">
         </div>
-        <h3>時間が足りない</h3>
-        <p>定型業務に時間を取られ、本質的な仕事ができない</p>
+        <h3>調整業務で時間が消える</h3>
+        <p>部門間の調整や確認作業で、実務の時間が取れない</p>
       </div>
       
       <div class="problem-card">
         <div class="problem-icon">
-          <img src="/assets/images/icons/cost.svg" alt="cost">
+          <img src="/assets/images/icons/cost.svg" alt="コスト">
         </div>
-        <h3>コストが高い</h3>
-        <p>人件費が膨らみ、ROIが見えない</p>
+        <h3>人件費が膨らむ</h3>
+        <p>雑務のために人を増やし、本来不要なコストが発生</p>
       </div>
       
       <div class="problem-card">
         <div class="problem-icon">
-          <img src="/assets/images/icons/PDCA.svg" alt="PDCA">
+          <img src="/assets/images/icons/PDCA.svg" alt="実行されない">
         </div>
-        <h3>戦略が実行されない</h3>
-        <p>良いアイデアはあるが、実装に移せない</p>
-      </div>
-    </div>
-    
-    <div class="problem-solution">
-      <p class="lead">これらの課題を、<strong>技術とビジネスの両面から解決</strong>します。</p>
-    </div>
-  </div>
-</section>
-
-<!-- 実績セクション -->
-<section class="achievements-section">
-  <div class="container">
-    <h2 class="section-title">主な実績</h2>
-    <p class="section-intro">
-      データドリブンな業務改善で、確実な成果を実現
-    </p>
-    
-    <div class="achievements-grid">
-      <div class="achievement-item">
-        <div class="achievement-icon">💰</div>
-        <div class="achievement-value">年間400万円</div>
-        <div class="achievement-label">コスト削減</div>
-      </div>
-      
-      <div class="achievement-item">
-        <div class="achievement-icon">⚡</div>
-        <div class="achievement-value">246%向上</div>
-        <div class="achievement-label">生産性向上</div>
-      </div>
-      
-      <div class="achievement-item">
-        <div class="achievement-icon">⏱️</div>
-        <div class="achievement-value">1,356時間/年</div>
-        <div class="achievement-label">自動化工数削減</div>
-      </div>
-      
-      <div class="achievement-item">
-        <div class="achievement-icon">📈</div>
-        <div class="achievement-value">3-4ヶ月</div>
-        <div class="achievement-label">投資回収期間</div>
+        <h3>改善が進まない</h3>
+        <p>忙しすぎて、業務改善に手が回らない悪循環</p>
       </div>
     </div>
   </div>
@@ -631,13 +628,12 @@
 <!-- サービス概要 -->
 <section class="services-overview">
   <div class="container">
-    <h2 class="section-title">提供サービス</h2>
+    <h2 class="section-title">コア業務に集中するための3つのアプローチ</h2>
     <p class="section-intro">
-      戦略立案から実装・定着まで、一貫してサポート
+      雑務を削減し、本来の仕事に時間を使えるように
     </p>
     
     <div class="services-grid">
-      
       <div class="service-card">
         <div class="service-icon">🔧</div>
         <h3>業務自動化・効率化</h3>
@@ -664,7 +660,6 @@
           詳しく見る →
         </a>
       </div>
-      
     </div>
     
     <div class="cta-center">
@@ -675,89 +670,13 @@
   </div>
 </section>
 
-<!-- 強み・特徴 -->
-<section class="features">
-  <div class="container">
-    <h2 class="section-title">選ばれる3つの理由</h2>
-    
-    <div class="features-list">
-      
-      <div class="feature-item">
-        <div class="feature-number">01</div>
-        <div class="feature-content">
-          <h3>ビジネスと技術の両面に精通</h3>
-          <p>
-            ビジネスサイドでの技術活用経験により、技術実装とビジネス成果の両方を重視。
-            「作って終わり」ではなく、確実に成果につながる施策を提供します。
-          </p>
-        </div>
-      </div>
-      
-      <div class="feature-item">
-        <div class="feature-number">02</div>
-        <div class="feature-content">
-          <h3>CS/Sales/Biz Opsに特化</h3>
-          <p>
-            CS/Sales/Biz Ops特有の課題を深く理解。
-            現場で即実践できる、実用的なソリューションを提供します。
-          </p>
-        </div>
-      </div>
-      
-      <div class="feature-item">
-        <div class="feature-number">03</div>
-        <div class="feature-content">
-          <h3>迅速な実装と確実なROI</h3>
-          <p>
-            投資回収期間3-4ヶ月の実績。小さく始めて大きく育てるアプローチで、
-            リスクを最小化しながら確実な成果を実現します。
-          </p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-<!-- 技術スタック -->
-<section class="tech-stack">
-  <div class="container">
-    <h2 class="section-title">技術スタック</h2>
-    <p class="section-intro">
-      実践的な技術で、ビジネス課題を解決
-    </p>
-    
-    <div class="tech-grid">
-      <div class="tech-item">
-        <h4>自動化・連携</h4>
-        <p>Google Apps Script<br>JavaScript/Python</p>
-      </div>
-      
-      <div class="tech-item">
-        <h4>AI活用</h4>
-        <p>Claude API<br>Vertex AI</p>
-      </div>
-      
-      <div class="tech-item">
-        <h4>データ基盤</h4>
-        <p>Salesforce<br>API開発</p>
-      </div>
-      
-      <div class="tech-item">
-        <h4>バックエンド</h4>
-        <p>Python/FastAPI<br>Node.js</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA（お問い合わせ誘導） -->
+<!-- CTA -->
 <section class="cta-section">
   <div class="container">
     <div class="cta-box">
       <h2>まずは無料相談から始めませんか？</h2>
       <p>
-        貴社の課題をお聞きし、最適なアプローチをご提案します。<br>
+        現在の業務状況をお聞きし、どれだけ時間を生み出せるか試算します。<br>
         お気軽にお問い合わせください。
       </p>
       <a href="/contact/" class="btn btn-primary btn-lg">
@@ -770,7 +689,6 @@
   </div>
 </section>
 
-</div>
 
   </main>
   

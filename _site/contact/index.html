@@ -29,46 +29,12 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   
-  <!-- Styles -->
+  <!-- Styles - 直接パスを指定 -->
   <link rel="stylesheet" href="/assets/css/main.css">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  
-  <style>
-    /* 強制的な中央寄せ */
-    html {
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100%;
-      overflow-x: hidden;
-    }
-    
-    body {
-      margin: 0 auto !important;
-      padding: 0 !important;
-      max-width: 100% !important;
-      overflow-x: hidden;
-    }
-    
-    /* コンテナの中央寄せを強制 */
-    .container {
-      max-width: 1200px !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      padding-left: 20px !important;
-      padding-right: 20px !important;
-      width: 100% !important;
-    }
-    
-    @media (max-width: 768px) {
-      .container {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-      }
-    }
-  </style>
 </head>
 <body class="page">
   
@@ -246,6 +212,20 @@
   margin-top: 32px;
 }
 
+.form-setup-notice {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.form-setup-notice p {
+  margin: 0;
+  color: #856404;
+}
+
 .faq-section {
   margin-top: 80px;
   max-width: 800px;
@@ -314,6 +294,19 @@
 <div class="contact-form-section" id="contact-form">
   <h2>お問い合わせフォーム</h2>
   
+  <div class="form-setup-notice">
+    <p><strong>📝 フォーム設定が必要です</strong><br />
+    Formspreeに登録して、YOUR_FORM_IDを実際のIDに置き換えてください。<br />
+    登録方法：<a href="https://formspree.io/" target="_blank">https://formspree.io/</a></p>
+  </div>
+  
+  <!-- 
+    フォーム設定手順：
+    1. https://formspree.io/ でアカウント作成
+    2. 新しいフォームを作成
+    3. フォームIDをコピー（例：xvoeqrlz）
+    4. 下記のYOUR_FORM_IDを置き換え
+  -->
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     <div class="form-group">
       <label for="name">
@@ -333,7 +326,7 @@
       <label for="email">
         メールアドレス<span class="form-required">*</span>
       </label>
-      <input type="email" id="email" name="email" required="" />
+      <input type="email" id="email" name="_replyto" required="" />
     </div>
     
     <div class="form-group">
