@@ -8,10 +8,10 @@ description: 雑務や調整に追われず、本来やるべき仕事に集中�
 /* ヒーローセクション */
 .hero {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 150px 0 80px;
+  padding: 100px 0 80px;
 }
 
-.hero .container {
+.hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 60px;
@@ -22,7 +22,7 @@ description: 雑務や調整に追われず、本来やるべき仕事に集中�
   .hero {
     padding: 80px 0 60px;
   }
-  .hero .container {
+  .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -367,36 +367,6 @@ description: 雑務や調整に追われず、本来やるべき仕事に集中�
   line-height: 1.7;
 }
 
-/* その他の共通スタイルは既存を維持 */
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 16px;
-  color: #2c3e50;
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-}
-
-.section-intro {
-  text-align: center;
-  font-size: 1.125rem;
-  color: #7f8c8d;
-  margin-bottom: 48px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-center {
-  text-align: center;
-  margin-top: 32px;
-}
-
 /* CTAセクション */
 .cta-section {
   background: linear-gradient(135deg, #2c5aa0 0%, #1e3a6f 100%);
@@ -444,44 +414,46 @@ description: 雑務や調整に追われず、本来やるべき仕事に集中�
 <!-- ヒーローセクション -->
 <section class="hero">
   <div class="container">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        本来やるべき仕事に<br>
-        <span class="highlight">集中できる環境</span>を作ります
-      </h1>
-      <p class="hero-subtitle">
-        レポート作成、手入力、調整業務…<br>
-        雑務に追われて、コア業務に時間が使えていませんか？<br>
-        業務自動化とプロセス最適化で、確実に時間を生み出します。
-      </p>
-      
-      <!-- 実績の数字 -->
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-value">1,356時間</span>
-          <span class="stat-label">年間工数削減</span>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          本来やるべき仕事に<br>
+          <span class="highlight">集中できる環境</span>を作ります
+        </h1>
+        <p class="hero-subtitle">
+          レポート作成、手入力、調整業務…<br>
+          雑務に追われて、コア業務に時間が使えていませんか？<br>
+          業務自動化とプロセス最適化で、確実に時間を生み出します。
+        </p>
+        
+        <!-- 実績の数字 -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value">1,356時間</span>
+            <span class="stat-label">年間工数削減</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">約400万円</span>
+            <span class="stat-label">コスト削減効果</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">3-4ヶ月</span>
+            <span class="stat-label">投資回収期間</span>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-value">約400万円</span>
-          <span class="stat-label">コスト削減効果</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">3-4ヶ月</span>
-          <span class="stat-label">投資回収期間</span>
+        
+        <div class="hero-cta">
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">
+            無料相談を申し込む
+          </a>
+          <a href="{{ '/services/' | relative_url }}" class="btn btn-secondary btn-lg">
+            サービスを見る
+          </a>
         </div>
       </div>
-      
-      <div class="hero-cta">
-        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">
-          無料相談を申し込む
-        </a>
-        <a href="{{ '/services/' | relative_url }}" class="btn btn-secondary btn-lg">
-          サービスを見る
-        </a>
+      <div class="hero-image">
+        <img src="{{ '/assets/images/hero/tribonacci.svg' | relative_url }}" alt="業務改善イメージ">
       </div>
-    </div>
-    <div class="hero-image">
-      <img src="{{ '/assets/images/hero/tribonacci.svg' | relative_url }}" alt="業務改善イメージ">
     </div>
   </div>
 </section>
