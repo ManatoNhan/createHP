@@ -67,7 +67,7 @@ $wide: 1200px;
 $transition-speed: 0.3s;
 
 // ヘッダーの高さ（固定ヘッダー用）
-$header-height: 200px;
+$header-height: 80px;
 
 // ========================================
 // ベーススタイル
@@ -206,7 +206,7 @@ section {
 .site-header {
   background-color: $bg-white;
   border-bottom: 1px solid $border-color;
-  position: fixed;  // stickyから fixedに変更
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -270,6 +270,7 @@ section {
     height: 2px;
     background-color: $text-primary;
     margin: 3px 0;
+    transition: $transition-speed;
   }
 }
 
@@ -314,6 +315,7 @@ section {
     font-weight: 500;
     padding: 8px 4px;
     border-bottom: 2px solid transparent;
+    transition: border-color $transition-speed;
 
     &:hover,
     &.active {
@@ -464,6 +466,7 @@ section {
 
   .icon {
     width: 20px;
+    flex-shrink: 0;
   }
 
   a {
@@ -503,6 +506,10 @@ section {
     color: $text-light;
     font-size: 0.875rem;
     margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   a {
