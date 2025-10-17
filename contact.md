@@ -133,6 +133,20 @@ description: 業務改善のご相談は、お気軽にお問い合わせくだ�
   margin-top: 32px;
 }
 
+.form-setup-notice {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.form-setup-notice p {
+  margin: 0;
+  color: #856404;
+}
+
 .faq-section {
   margin-top: 80px;
   max-width: 800px;
@@ -201,6 +215,19 @@ description: 業務改善のご相談は、お気軽にお問い合わせくだ�
 <div class="contact-form-section" id="contact-form">
   <h2>お問い合わせフォーム</h2>
   
+  <div class="form-setup-notice">
+    <p><strong>📝 フォーム設定が必要です</strong><br>
+    Formspreeに登録して、YOUR_FORM_IDを実際のIDに置き換えてください。<br>
+    登録方法：<a href="https://formspree.io/" target="_blank">https://formspree.io/</a></p>
+  </div>
+  
+  <!-- 
+    フォーム設定手順：
+    1. https://formspree.io/ でアカウント作成
+    2. 新しいフォームを作成
+    3. フォームIDをコピー（例：xvoeqrlz）
+    4. 下記のYOUR_FORM_IDを置き換え
+  -->
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     <div class="form-group">
       <label for="name">
@@ -220,7 +247,7 @@ description: 業務改善のご相談は、お気軽にお問い合わせくだ�
       <label for="email">
         メールアドレス<span class="form-required">*</span>
       </label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="_replyto" required>
     </div>
     
     <div class="form-group">

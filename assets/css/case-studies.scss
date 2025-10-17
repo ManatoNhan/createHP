@@ -1,0 +1,603 @@
+---
+---
+
+// ========================================
+// 導入事例ページ専用スタイル
+// ========================================
+
+@import "../../_sass/main";
+
+// 変数定義
+$primary-color: #2c5aa0;
+$secondary-color: #34495e;
+$accent-color: #e67e22;
+$success-color: #27ae60;
+
+$text-primary: #2c3e50;
+$text-secondary: #7f8c8d;
+$text-light: #95a5a6;
+
+$bg-white: #ffffff;
+$bg-light: #f8f9fa;
+$bg-dark: #2c3e50;
+
+$border-color: #e1e8ed;
+
+$transition-speed: 0.3s;
+
+// ブレークポイント
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// ========================================
+// ページヒーロー
+// ========================================
+
+.page-hero {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 60px 0 40px;
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    color: $text-primary;
+    
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
+  }
+  
+  .page-subtitle {
+    text-align: center;
+    font-size: 1.125rem;
+    color: $text-secondary;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+// ========================================
+// 成果サマリー
+// ========================================
+
+.results-summary {
+  background-color: $bg-white;
+  padding: 60px 0;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  
+  @media (max-width: $mobile) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.result-card {
+  text-align: center;
+  padding: 24px;
+  background-color: $bg-light;
+  border-radius: 8px;
+  transition: transform $transition-speed;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+  
+  .result-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin-bottom: 8px;
+    
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+    }
+  }
+  
+  .result-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 4px;
+  }
+  
+  .result-desc {
+    font-size: 0.875rem;
+    color: $text-secondary;
+    margin: 0;
+  }
+  
+  .result-metric {
+    font-size: 0.875rem;
+    color: $text-secondary;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .result-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $success-color;
+  }
+}
+
+// ========================================
+// 部門別セクション
+// ========================================
+
+.case-studies-section {
+  background-color: $bg-light;
+  padding: 80px 0;
+}
+
+.department-section {
+  margin-bottom: 80px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.department-header {
+  text-align: center;
+  margin-bottom: 48px;
+  
+  .department-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: 12px;
+    
+    @media (max-width: $tablet) {
+      font-size: 1.75rem;
+    }
+  }
+  
+  p {
+    font-size: 1.125rem;
+    color: $text-secondary;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+  
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-card {
+  background-color: $bg-white;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform $transition-speed, box-shadow $transition-speed;
+  display: flex;
+  flex-direction: column;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  }
+  
+  .case-header {
+    margin-bottom: 20px;
+    
+    .case-category {
+      display: inline-block;
+      background-color: lighten($primary-color, 40%);
+      color: $primary-color;
+      font-size: 0.875rem;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    
+    h3 {
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: $text-primary;
+      margin: 0;
+      line-height: 1.4;
+    }
+  }
+  
+  .case-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+    
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      
+      .info-label {
+        font-size: 0.875rem;
+        color: $text-light;
+        margin-bottom: 4px;
+      }
+      
+      .info-value {
+        font-size: 1rem;
+        color: $text-primary;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .case-challenge {
+    margin-bottom: 20px;
+    
+    h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $text-secondary;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    p {
+      color: $text-primary;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+  
+  .case-results {
+    margin-bottom: 24px;
+    flex-grow: 1;
+    
+    h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $text-secondary;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      background-color: $bg-light;
+      border-radius: 4px;
+      
+      strong {
+        color: $primary-color;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      
+      span {
+        color: $text-primary;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .btn {
+    margin-top: auto;
+  }
+}
+
+// ========================================
+// 事例詳細ページ
+// ========================================
+
+.case-study-detail {
+  
+  .case-hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px 0 60px;
+  }
+  
+  .case-breadcrumb {
+    font-size: 0.875rem;
+    color: $text-secondary;
+    margin-bottom: 32px;
+    
+    a {
+      color: $text-secondary;
+      text-decoration: none;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    
+    span {
+      color: $text-primary;
+    }
+  }
+  
+  .case-header {
+    text-align: center;
+    margin-bottom: 40px;
+    
+    .case-meta {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      
+      .case-department,
+      .case-category {
+        display: inline-block;
+        background-color: lighten($primary-color, 40%);
+        color: $primary-color;
+        font-size: 0.875rem;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-weight: 500;
+      }
+    }
+    
+    .case-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $text-primary;
+      margin-bottom: 32px;
+      line-height: 1.3;
+      
+      @media (max-width: $tablet) {
+        font-size: 2rem;
+      }
+    }
+    
+    .case-info-grid {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      
+      .info-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .info-label {
+          font-size: 0.875rem;
+          color: $text-light;
+          margin-bottom: 4px;
+        }
+        
+        .info-value {
+          font-size: 1.125rem;
+          color: $text-primary;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  
+  .case-challenge-summary {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 32px;
+    background-color: lighten($accent-color, 35%);
+    border-left: 4px solid $accent-color;
+    border-radius: 4px;
+    
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $text-secondary;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    p {
+      font-size: 1.125rem;
+      color: $text-primary;
+      line-height: 1.7;
+      margin: 0;
+    }
+  }
+  
+  .case-results-highlight {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $text-secondary;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+  }
+}
+
+.case-content {
+  background-color: $bg-white;
+  padding: 80px 0;
+  
+  .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $text-primary;
+      margin: 48px 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid $border-color;
+      
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $text-primary;
+      margin: 36px 0 16px;
+    }
+    
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $text-primary;
+      margin: 24px 0 12px;
+    }
+    
+    p {
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: $text-primary;
+      margin-bottom: 20px;
+    }
+    
+    ul, ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+      
+      li {
+        font-size: 1.0625rem;
+        line-height: 1.8;
+        color: $text-primary;
+        margin-bottom: 12px;
+      }
+    }
+    
+    strong {
+      font-weight: 600;
+      color: $text-primary;
+    }
+    
+    table {
+      width: 100%;
+      margin: 32px 0;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+      
+      @media (max-width: $tablet) {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 12px 16px;
+        text-align: left;
+        border: 1px solid $border-color;
+      }
+      
+      th {
+        background-color: $bg-light;
+        font-weight: 600;
+        color: $text-primary;
+      }
+      
+      td {
+        color: $text-primary;
+      }
+    }
+    
+    blockquote {
+      margin: 32px 0;
+      padding: 24px 32px;
+      background-color: $bg-light;
+      border-left: 4px solid $primary-color;
+      font-style: italic;
+      
+      p {
+        margin-bottom: 12px;
+        font-size: 1.125rem;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    code {
+      background-color: $bg-light;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: #c7254e;
+    }
+    
+    pre {
+      background-color: #2d2d2d;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 24px 0;
+      
+      code {
+        background: none;
+        padding: 0;
+        color: inherit;
+      }
+    }
+  }
+}
+
+// ========================================
+// 関連事例
+// ========================================
+
+.related-cases {
+  background-color: $bg-light;
+  padding: 80px 0;
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: 48px;
+  }
+}
+
+// ========================================
+// ユーティリティ
+// ========================================
+
+.cta-center {
+  text-align: center;
+  margin-top: 48px;
+}
