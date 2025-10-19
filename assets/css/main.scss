@@ -67,7 +67,7 @@ $wide: 1200px;
 $transition-speed: 0.3s;
 
 // ヘッダーの高さ（固定ヘッダー用）
-$header-height: 80px;
+$header-height: 90px;
 
 // ========================================
 // ベーススタイル
@@ -200,7 +200,7 @@ section {
 }
 
 // ========================================
-// ヘッダー（固定）
+// ヘッダー（固定）- 修正版
 // ========================================
 
 .site-header {
@@ -213,6 +213,7 @@ section {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  min-height: $header-height; // 最小高さを確保
 
   &.scrolled {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -223,14 +224,18 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 20px 0; // 16px → 20px に増やす
+  min-height: 70px; // 最小高さを確保
 
   @media (max-width: $tablet) {
     flex-wrap: wrap;
+    padding: 16px 0;
   }
 }
 
 .navbar-brand {
+  padding: 4px 0; // テキストの上下に余白を追加
+  
   .logo {
     display: flex;
     flex-direction: column;
@@ -244,12 +249,15 @@ section {
   .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
+    line-height: 1.4; // 行の高さを確保
+    padding: 2px 0; // 上下に少し余白
   }
 
   .logo-subtitle {
     font-size: 0.75rem;
     color: $text-secondary;
-    margin-top: 2px;
+    margin-top: 4px; // 2px → 4px に増やす
+    line-height: 1.3; // 行の高さを確保
   }
 }
 
