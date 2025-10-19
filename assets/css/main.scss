@@ -93,7 +93,8 @@ body {
   padding: 0;
   width: 100%;
   // ヘッダー固定のため上部にパディング
-  padding-top: $header-height;
+  padding-top: 120px
+  //$header-height;
 }
 
 // ========================================
