@@ -188,7 +188,9 @@ description: ビジネスと技術の両面から、CS/Sales/Biz Opsの業務改
 
 <div class="profile-section">
   <div class="profile-image">
-    👨‍💼
+    <img src="{{ '/assets/images/icons/preview_icon.svg' | relative_url }}" 
+         alt="preview"
+         style="width: 300px; height: 300px;">
   </div>
   <div class="profile-content">
     <h2>{{ site.company.full_name }}</h2>
