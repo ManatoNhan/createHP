@@ -55,7 +55,7 @@ description: 業務改善とDX推進に関する情報を発信しています
 }
 
 .note-topics {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto 60px;
 }
 
@@ -68,8 +68,17 @@ description: 業務改善とDX推進に関する情報を発信しています
 
 .topics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  justify-items: center;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .topic-card {
@@ -79,6 +88,8 @@ description: 業務改善とDX推進に関する情報を発信しています
   text-align: center;
   transition: all 0.3s;
   border: 2px solid transparent;
+  width: 100%;
+  max-width: 250px;
 }
 
 .topic-card:hover {
