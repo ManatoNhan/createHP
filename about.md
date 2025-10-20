@@ -1,7 +1,6 @@
 ---
 layout: page
-title: 私について
-description: ビジネスと技術の両面から、CS/Sales/Biz Opsの業務改善を支援します
+title: About
 ---
 
 <style>
@@ -196,14 +195,15 @@ description: ビジネスと技術の両面から、CS/Sales/Biz Opsの業務改
     <h2>{{ site.company.full_name }}</h2>
     <p class="profile-role">{{ site.company.role }}</p>
     <p>
-      ビジネスサイドでの技術活用経験を活かし、CS/Sales/Biz Opsに特化した業務改善・DX推進を支援しています。
+      ビジネスサイドでの技術活用経験を活かし、<strong>本来やるべき仕事に集中できる環境を作ります</strong>
     </p>
     <p>
-      「技術のための技術」ではなく、<strong>ビジネス成果に直結する実装</strong>を重視。
-      年間400万円のコスト削減、生産性246%向上など、確実なROIを実現してきました。
+      「技術のための技術」ではなく、<strong>ビジネス成果に直結する実装</strong>を重視。<br>
+      生産性246%向上、月113時間（約14営業日分）の工数削減など、
+      確実なROIを3-4ヶ月で実現してきました。
     </p>
     <p>
-      技術実装とビジネス成果の両方を理解しているからこそ、
+      技術実装とビジネス成果の両方を理解しているからこそ、<br>
       現場に即した実用的なソリューションを提供できます。
     </p>
   </div>
@@ -213,7 +213,12 @@ description: ビジネスと技術の両面から、CS/Sales/Biz Opsの業務改
   <h2>専門領域</h2>
   <div class="expertise-grid">
     <div class="expertise-card">
-      <h3>🔧 業務自動化・効率化</h3>
+      <h3 style="display: flex; align-items: center; gap: 10px;">
+      <img src="{{ '/assets/images/icons/Task.svg' | relative_url }}" 
+           alt="Task"
+           style="height: 30px; width: 30px;"> 
+           業務自動化・効率化
+      </h3>
       <ul>
         <li>レポート自動化</li>
         <li>データ連携開発</li>
@@ -223,7 +228,12 @@ description: ビジネスと技術の両面から、CS/Sales/Biz Opsの業務改
     </div>
     
     <div class="expertise-card">
-      <h3>🤖 AI活用・DX推進</h3>
+      <h3 style="display: flex; align-items: center; gap: 10px;">
+      <img src="{{ '/assets/images/icons/AI.svg' | relative_url }}" 
+           alt="AI"
+           style="height: 30px; width: 30px;">
+           AI活用・DX推進
+      </h3>
       <ul>
         <li>Claude API実装</li>
         <li>Vertex AI活用</li>
@@ -233,7 +243,12 @@ description: ビジネスと技術の両面から、CS/Sales/Biz Opsの業務改
     </div>
     
     <div class="expertise-card">
-      <h3>📊 データ基盤構築</h3>
+      <h3 style="display: flex; align-items: center; gap: 10px;">
+      <img src="{{ '/assets/images/icons/DB.svg' | relative_url }}" 
+           alt="DB"
+           style="height: 30px; width: 30px;">
+           データ基盤構築
+      </h3>
       <ul>
         <li>Salesforce連携</li>
         <li>API開発</li>
@@ -264,7 +279,7 @@ description: ビジネスと技術の両面から、CS/Sales/Biz Opsの業務改
         <h3>Biz Ops / 業務改善推進</h3>
         <p>
           事業部門での業務改善・自動化推進を担当。
-          年間1,356時間の工数削減、約400万円のコスト削減を実現。
+          年間1,356時間の工数削減を実現。
         </p>
       </div>
     </div>

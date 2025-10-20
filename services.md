@@ -207,7 +207,11 @@ description: CS/Sales/Biz Opsの業務改善と戦略実装を、一貫してサ
   
   <div class="service-item">
     <div class="service-header">
-      <div class="service-icon">🔧</div>
+      <div class="service-icon">
+        <img src="{{ '/assets/images/icons/Task.svg' | relative_url }}" 
+             alt="Task"
+             style="height: 100px; width: 100px;">
+      </div>
       <h2>業務自動化・効率化</h2>
     </div>
     
@@ -240,7 +244,11 @@ description: CS/Sales/Biz Opsの業務改善と戦略実装を、一貫してサ
   
   <div class="service-item">
     <div class="service-header">
-      <div class="service-icon">🤖</div>
+      <div class="service-icon">
+        <img src="{{ '/assets/images/icons/AI.svg' | relative_url }}"
+             alt="AI"
+             style="height: 100px; width: 100px;">
+      </div>
       <h2>AI活用・DX推進</h2>
     </div>
     
@@ -273,7 +281,11 @@ description: CS/Sales/Biz Opsの業務改善と戦略実装を、一貫してサ
   
   <div class="service-item">
     <div class="service-header">
-      <div class="service-icon">📊</div>
+      <div class="service-icon">
+        <img src="{{ '/assets/images/icons/DB.svg' | relative_url }}"
+             alt="DB"
+             style="height: 100px; width: 100px;">
+      </div>
       <h2>データ基盤構築</h2>
     </div>
     
