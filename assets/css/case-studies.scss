@@ -152,8 +152,11 @@ $desktop: 1024px;
   .department-icon {
     font-size: 3rem;
     margin-bottom: 16px;
-    display: block;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
   
   h2 {
     font-size: 2rem;

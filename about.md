@@ -213,7 +213,12 @@ title: About
   <h2>専門領域</h2>
   <div class="expertise-grid">
     <div class="expertise-card">
-      <h3>🔧 業務自動化・効率化</h3>
+      <h3 style="display: flex; align-items: center; gap: 10px;">
+      <img src="{{ '/assets/images/icons/Task.svg' | relative_url }}" 
+           alt="Task"
+           style="height: 30px; width: 30px;"> 
+           業務自動化・効率化
+      </h3>
       <ul>
         <li>レポート自動化</li>
         <li>データ連携開発</li>
@@ -223,7 +228,12 @@ title: About
     </div>
     
     <div class="expertise-card">
-      <h3>🤖 AI活用・DX推進</h3>
+      <h3 style="display: flex; align-items: center; gap: 10px;">
+      <img src="{{ '/assets/images/icons/AI.svg' | relative_url }}" 
+           alt="AI"
+           style="height: 30px; width: 30px;">
+           AI活用・DX推進
+      </h3>
       <ul>
         <li>Claude API実装</li>
         <li>Vertex AI活用</li>
@@ -233,7 +243,12 @@ title: About
     </div>
     
     <div class="expertise-card">
-      <h3>📊 データ基盤構築</h3>
+      <h3 style="display: flex; align-items: center; gap: 10px;">
+      <img src="{{ '/assets/images/icons/DB.svg' | relative_url }}" 
+           alt="DB"
+           style="height: 30px; width: 30px;">
+           データ基盤構築
+      </h3>
       <ul>
         <li>Salesforce連携</li>
         <li>API開発</li>
