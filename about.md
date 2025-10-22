@@ -122,7 +122,7 @@ title: About
 .metric-value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #27ae60;
+  color: #e879b9;
   display: block;
   margin-bottom: 4px;
 }
