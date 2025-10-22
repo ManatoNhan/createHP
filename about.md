@@ -262,7 +262,7 @@ title: About
         <strong>アプローチ：</strong>業務プロセスの完全可視化から開始し、ボトルネックを特定。24ヶ月かけて段階的に業務を標準化・自動化し、組織全体の働き方を変革。
       </p>
       <p class="story-detail">
-        <strong>成果：</strong>ある部署で1人当たり生産性が246%向上。案件数170%増を達成しながら、人員は70%削減。投資回収は4ヶ月で完了。
+        <strong>成果：</strong>ある部署で1人当たり生産性が246%向上。案件数170%増を達成しながら、人員は70%削減を実現。
       </p>
       <div class="story-metrics">
         <div class="metric-item">
@@ -274,8 +274,8 @@ title: About
           <span class="metric-label">人員削減</span>
         </div>
         <div class="metric-item">
-          <span class="metric-value">4ヶ月</span>
-          <span class="metric-label">投資回収</span>
+          <span class="metric-value">24ヶ月</span>
+          <span class="metric-label">プロジェクト期間</span>
         </div>
       </div>
     </div>
@@ -303,8 +303,8 @@ title: About
           <span class="metric-label">調査品質</span>
         </div>
         <div class="metric-item">
-          <span class="metric-value">3ヶ月</span>
-          <span class="metric-label">投資回収</span>
+          <span class="metric-value">50分短縮</span>
+          <span class="metric-label">1件あたり</span>
         </div>
       </div>
     </div>
@@ -332,8 +332,8 @@ title: About
           <span class="metric-label">データ連携</span>
         </div>
         <div class="metric-item">
-          <span class="metric-value">400時間+</span>
-          <span class="metric-label">年間削減</span>
+          <span class="metric-value">年400+時間</span>
+          <span class="metric-label">総削減工数</span>
         </div>
       </div>
     </div>
