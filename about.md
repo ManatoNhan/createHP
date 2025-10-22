@@ -47,14 +47,97 @@ title: About
   margin-bottom: 16px;
 }
 
+.story-section {
+  margin-bottom: 80px;
+}
+
+.story-section h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.story-intro {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #7f8c8d;
+  line-height: 1.8;
+}
+
+.story-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.story-card {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 8px;
+  border-left: 4px solid #2c5aa0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.story-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2c5aa0 0%, #6b5ca5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.story-label {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 16px;
+}
+
+.story-detail {
+  color: #7f8c8d;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.story-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e1e8ed;
+}
+
+.metric-item {
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #27ae60;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: #7f8c8d;
+}
+
 .expertise-section,
-.experience-section,
 .approach-section {
   margin-bottom: 60px;
 }
 
 .expertise-section h2,
-.experience-section h2,
 .approach-section h2 {
   font-size: 2rem;
   margin-bottom: 32px;
@@ -99,51 +182,6 @@ title: About
   left: 0;
   color: #27ae60;
   font-weight: bold;
-}
-
-.timeline {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.timeline-item {
-  padding-left: 40px;
-  border-left: 2px solid #e1e8ed;
-  padding-bottom: 40px;
-  position: relative;
-}
-
-.timeline-item:last-child {
-  padding-bottom: 0;
-}
-
-.timeline-item:before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-color: #2c5aa0;
-  border-radius: 50%;
-  position: absolute;
-  left: -9px;
-  top: 0;
-}
-
-.timeline-year {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #2c5aa0;
-  margin-bottom: 8px;
-}
-
-.timeline-content h3 {
-  font-size: 1.25rem;
-  margin-bottom: 8px;
-  color: #2c3e50;
-}
-
-.timeline-content p {
-  color: #7f8c8d;
-  line-height: 1.7;
 }
 
 .approach-grid {
@@ -195,17 +233,110 @@ title: About
     <h2>{{ site.company.full_name }}</h2>
     <p class="profile-role">{{ site.company.role }}</p>
     <p>
-      ビジネスサイドでの技術活用経験を活かし、<strong>本来やるべき仕事に集中できる環境を作ります</strong>
+      前職（50名規模のベンチャー企業）で、CS/Sales/Biz Opsの業務プロセスを24ヶ月かけて再設計。<br>
+      <strong>生産性246%向上、年間1,356時間の工数削減</strong>を実現しました。
     </p>
     <p>
       「技術のための技術」ではなく、<strong>ビジネス成果に直結する実装</strong>を重視。<br>
-      生産性246%向上、月113時間（約14営業日分）の工数削減など、
-      確実なROIを3-4ヶ月で実現してきました。
+      現場経験があるからこそ、実務に即した実用的なソリューションを提供できます。
     </p>
-    <p>
-      技術実装とビジネス成果の両方を理解しているからこそ、<br>
-      現場に即した実用的なソリューションを提供できます。
-    </p>
+  </div>
+</div>
+
+<div class="story-section">
+  <h2>実際に創出した3つの成果</h2>
+  <p class="story-intro">
+    前職での24ヶ月間で、複数部署にわたる業務改善プロジェクトを推進。<br>
+    それぞれ異なるアプローチで、確実な成果を実現しました。
+  </p>
+  
+  <div class="story-cards">
+    <!-- ストーリー1: 組織全体の生産性改革 -->
+    <div class="story-card">
+      <div class="story-number">246%</div>
+      <div class="story-label">組織全体の生産性改革</div>
+      <p class="story-detail">
+        <strong>課題：</strong>属人化した業務プロセスにより、組織拡大の限界に直面。案件数増加に対し、人員を増やすしか手段がない状態。
+      </p>
+      <p class="story-detail">
+        <strong>アプローチ：</strong>業務プロセスの完全可視化から開始し、ボトルネックを特定。24ヶ月かけて段階的に業務を標準化・自動化し、組織全体の働き方を変革。
+      </p>
+      <p class="story-detail">
+        <strong>成果：</strong>ある部署で1人当たり生産性が246%向上。案件数170%増を達成しながら、人員は70%削減。投資回収は4ヶ月で完了。
+      </p>
+      <div class="story-metrics">
+        <div class="metric-item">
+          <span class="metric-value">170%増</span>
+          <span class="metric-label">案件数増加</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">70%削減</span>
+          <span class="metric-label">人員削減</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">4ヶ月</span>
+          <span class="metric-label">投資回収</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ストーリー2: 営業活動の効率化 -->
+    <div class="story-card">
+      <div class="story-number">60分→10分</div>
+      <div class="story-label">営業活動の効率化</div>
+      <p class="story-detail">
+        <strong>課題：</strong>営業準備（クライアント調査）に1件60分以上かかり、商談準備が営業活動のボトルネックに。質も属人的でばらつきが大きい状態。
+      </p>
+      <p class="story-detail">
+        <strong>アプローチ：</strong>Claude APIを活用し、複数ソースからの情報収集・分析を自動化。営業担当の負荷を最小限に抑えつつ、調査の質と網羅性を向上。
+      </p>
+      <p class="story-detail">
+        <strong>成果：</strong>クライアント調査時間を75%削減（60分→10-15分）。さらに調査の質が大幅に向上し、営業準備のボトルネック解消と成約率向上を同時実現。
+      </p>
+      <div class="story-metrics">
+        <div class="metric-item">
+          <span class="metric-value">75%削減</span>
+          <span class="metric-label">調査時間</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">質も向上</span>
+          <span class="metric-label">調査品質</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">3ヶ月</span>
+          <span class="metric-label">投資回収</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ストーリー3: 定型業務の自動化 -->
+    <div class="story-card">
+      <div class="story-number">400時間+</div>
+      <div class="story-label">定型業務の完全自動化</div>
+      <p class="story-detail">
+        <strong>課題：</strong>月次レポート作成に月20時間、データ入力に月13時間など、複数の定型業務が組織全体で年間1,000時間以上を消費。
+      </p>
+      <p class="story-detail">
+        <strong>アプローチ：</strong>影響度の高い業務から段階的に自動化。GAS、Python、API連携を組み合わせ、工数対効果を最大化しながら実装。
+      </p>
+      <p class="story-detail">
+        <strong>成果：</strong>レポート作成の完全自動化（月20時間→0時間）、データ連携の効率化（月13時間削減）など、年間400時間以上の工数を創出。
+      </p>
+      <div class="story-metrics">
+        <div class="metric-item">
+          <span class="metric-value">月20時間</span>
+          <span class="metric-label">レポート自動化</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">月13時間</span>
+          <span class="metric-label">データ連携</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-value">400時間+</span>
+          <span class="metric-label">年間削減</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -255,44 +386,6 @@ title: About
         <li>データ可視化</li>
         <li>分析基盤整備</li>
       </ul>
-    </div>
-  </div>
-</div>
-
-<div class="experience-section">
-  <h2>経歴</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-year">現在</div>
-      <div class="timeline-content">
-        <h3>DriVonacci 代表</h3>
-        <p>
-          CS/Sales/Biz Opsに特化した業務改善コンサルティング。
-          データドリブンなアプローチで、確実な成果創出を支援。
-        </p>
-      </div>
-    </div>
-    
-    <div class="timeline-item">
-      <div class="timeline-year">前職</div>
-      <div class="timeline-content">
-        <h3>Biz Ops / 業務改善推進</h3>
-        <p>
-          事業部門での業務改善・自動化推進を担当。
-          年間1,356時間の工数削減を実現。
-        </p>
-      </div>
-    </div>
-    
-    <div class="timeline-item">
-      <div class="timeline-year">それ以前</div>
-      <div class="timeline-content">
-        <h3>カスタマーサクセス / セールス</h3>
-        <p>
-          現場での実務経験を通じて、CS/Sales特有の課題と
-          実用的なソリューションの知見を蓄積。
-        </p>
-      </div>
     </div>
   </div>
 </div>
