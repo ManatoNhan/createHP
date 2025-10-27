@@ -5,6 +5,120 @@ description: CS/Sales/Biz Opsの業務改善と戦略実装を、一貫してサ
 ---
 
 <style>
+/* 収益性セクション用スタイル */
+.profitability-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 60px 48px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+  border-left: 6px solid #e67e22;
+}
+
+.profitability-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.profitability-intro {
+  font-size: 1.125rem;
+  color: #7f8c8d;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.profitability-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .profitability-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .profitability-section {
+    padding: 40px 24px;
+  }
+}
+
+.profitability-problems,
+.profitability-solutions {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.profitability-problems h3,
+.profitability-solutions h3 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #2c5aa0;
+}
+
+.profitability-problems ul,
+.profitability-solutions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profitability-problems li,
+.profitability-solutions li {
+  padding: 12px 0;
+  padding-left: 32px;
+  position: relative;
+  color: #7f8c8d;
+  line-height: 1.7;
+}
+
+.profitability-problems li:before {
+  content: "⚠";
+  position: absolute;
+  left: 0;
+  color: #e67e22;
+  font-size: 1.25rem;
+}
+
+.profitability-solutions li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.profitability-solutions li strong {
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.profitability-quote {
+  background-color: #fff3e0;
+  padding: 24px;
+  border-radius: 4px;
+  border-left: 4px solid #e67e22;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.profitability-quote p {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+  font-style: italic;
+}
+
 .service-intro {
   text-align: center;
   max-width: 800px;
@@ -133,7 +247,6 @@ description: CS/Sales/Biz Opsの業務改善と戦略実装を、一貫してサ
   color: #2c3e50;
 }
 
-/* 1行（1x4）レイアウト */
 .process-steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -195,6 +308,41 @@ description: CS/Sales/Biz Opsの業務改善と戦略実装を、一貫してサ
   font-size: 0.95rem;
 }
 </style>
+
+<!-- 🆕 収益性改善セクション（最上部に追加） -->
+<div class="profitability-section">
+  <h2>単なる効率化ではなく、営業利益向上を実現</h2>
+  <p class="profitability-intro">
+    業務改善は手段であり、最終目標は<strong>営業利益の向上</strong>です。<br>
+    売上原価・販売費の最適化を通じて、持続可能な収益構造を構築します。
+  </p>
+  
+  <div class="profitability-content">
+    <div class="profitability-problems">
+      <h3>よくある構造的問題</h3>
+      <ul>
+        <li>売上は伸びているのに、営業利益率が改善しない</li>
+        <li>売上原価・販売費の管理が後回しになっている</li>
+        <li>非効率な業務プロセスが、利益を圧迫している</li>
+        <li>高スキル人材が単純作業に時間を奪われている</li>
+      </ul>
+    </div>
+    
+    <div class="profitability-solutions">
+      <h3>私たちのアプローチ</h3>
+      <ul>
+        <li><strong>売上原価の削減</strong>業務自動化による人件費最適化</li>
+        <li><strong>販売費の効率化</strong>営業プロセス改善による商談効率向上</li>
+        <li><strong>営業利益率の改善</strong>コア業務への集中による収益性向上</li>
+        <li><strong>ROI重視の実装</strong>投資回収期間3-4ヶ月を目安とした現実的提案</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="profitability-quote">
+    <p>「自社のサービスの収益性、正しく把握されていますか？」</p>
+  </div>
+</div>
 
 <div class="service-intro">
   <p>
