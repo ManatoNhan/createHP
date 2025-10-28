@@ -71,7 +71,7 @@ title: About
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -138,7 +138,7 @@ title: About
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   padding: 60px 40px;
   border-radius: 8px;
-  max-width: 960px;
+  max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -278,7 +278,7 @@ title: About
 .expertise-section,
 .approach-section {
   margin-bottom: 60px;
-  max-width: 900px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
