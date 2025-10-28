@@ -71,7 +71,7 @@ title: About
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -132,9 +132,155 @@ title: About
   color: #7f8c8d;
 }
 
+/* 独自メソッドセクション */
+.methodology-section {
+  margin-bottom: 80px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 60px 40px;
+  border-radius: 8px;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.methodology-section h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.methodology-intro {
+  text-align: center;
+  font-size: 1.125rem;
+  color: #7f8c8d;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+.methodology-diagram {
+  text-align: center;
+  margin-bottom: 48px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.methodology-diagram img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.methodology-card {
+  background-color: #ffffff;
+  padding: 32px 24px;
+  border-radius: 8px;
+  border-left: 4px solid #2c5aa0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.methodology-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.methodology-card h3 {
+  font-size: 1.125rem;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.methodology-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2c5aa0;
+  margin-bottom: 8px;
+}
+
+.methodology-effect {
+  color: #27ae60;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.methodology-example {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding-top: 16px;
+  border-top: 1px solid #e1e8ed;
+}
+
+.methodology-why {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 32px;
+}
+
+.methodology-why h3 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.methodology-why p {
+  color: #7f8c8d;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.methodology-strength {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 8px;
+  border-left: 4px solid #e67e22;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.methodology-strength h3 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 16px;
+}
+
+.methodology-strength p {
+  color: #7f8c8d;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.methodology-strength p:last-child {
+  margin-bottom: 0;
+}
+
+.methodology-strength strong {
+  color: #2c3e50;
+}
+
 .expertise-section,
 .approach-section {
   margin-bottom: 60px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .expertise-section h2,
@@ -186,8 +332,14 @@ title: About
 
 .approach-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .approach-card {
@@ -220,6 +372,24 @@ title: About
 .approach-card p {
   color: #7f8c8d;
   line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .methodology-section {
+    padding: 40px 24px;
+  }
+  
+  .methodology-diagram {
+    padding: 24px;
+  }
+  
+  .methodology-diagram img {
+    max-width: 100%;
+  }
+  
+  .methodology-why {
+    padding: 24px;
+  }
 }
 </style>
 
@@ -337,6 +507,82 @@ title: About
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- 🆕 3つの視点フレームワークセクション -->
+<div class="methodology-section">
+  <h2>独自のアプローチ: 3つの視点で改善機会を発見</h2>
+  <p class="methodology-intro">
+    業務改善には、<strong>業務プロセス・データ・システム</strong>の3つの視点が不可欠です。<br>
+    それぞれを個別に改善するのではなく、<strong>掛け合わせることで真の価値を創出</strong>します。
+  </p>
+  
+  <!-- 図解A: 3つの視点と掛け合わせ -->
+  <div class="methodology-diagram">
+    <img src="{{ '/assets/images/methodology/three-perspectives.svg' | relative_url }}" 
+         alt="3つの視点で改善機会を発見">
+  </div>
+  
+  <!-- 掛け合わせの価値 -->
+  <div class="methodology-grid">
+    <div class="methodology-card">
+      <h3>業務プロセス × システム</h3>
+      <p class="methodology-value">業務プロセス自動化</p>
+      <p class="methodology-effect">→ 人件費削減・工数削減</p>
+      <p class="methodology-example">
+        <strong>例:</strong> レポート作成の自動化により、月20時間→0時間を実現
+      </p>
+    </div>
+    
+    <div class="methodology-card">
+      <h3>データ × システム</h3>
+      <p class="methodology-value">データ活用基盤</p>
+      <p class="methodology-effect">→ コスト可視化・意思決定の高度化</p>
+      <p class="methodology-example">
+        <strong>例:</strong> ダッシュボード構築により、リアルタイムでの経営判断を実現
+      </p>
+    </div>
+    
+    <div class="methodology-card">
+      <h3>業務プロセス × データ</h3>
+      <p class="methodology-value">営業インサイト創出</p>
+      <p class="methodology-effect">→ 分散情報の一元管理</p>
+      <p class="methodology-example">
+        <strong>例:</strong> 顧客データ統合により、営業準備時間を75%削減
+      </p>
+    </div>
+  </div>
+  
+  <!-- なぜ3つの視点が重要なのか -->
+  <div class="methodology-why">
+    <h3>なぜ3つの視点が重要なのか？</h3>
+    
+    <!-- 図解B: 組織拡大とギャップ -->
+    <div class="methodology-diagram">
+      <img src="{{ '/assets/images/methodology/organization-gap.svg' | relative_url }}" 
+           alt="組織拡大に伴う連携ギャップ">
+    </div>
+    
+    <p>
+      組織が拡大すると、Business・Data・Productの専門性は向上します。<br>
+      しかし同時に、<strong>それぞれの連携困難性も増大</strong>します。
+    </p>
+    <p>
+      小規模組織では自然にできていた部門間の連携が、組織の成長とともに難しくなり、<br>
+      <strong>情報の分断、重複作業、意思決定の遅延</strong>といった問題が生じます。
+    </p>
+  </div>
+  
+  <div class="methodology-strength">
+    <h3>私の強み</h3>
+    <p>
+      私は、<strong>Business・Data・Product・Management</strong>を統合的に理解し、
+      部門間の「ギャップ」を埋めることができます。
+    </p>
+    <p>
+      3つの視点を掛け合わせることで、<strong>単一領域の改善では実現できない、組織全体の最適化</strong>を実現します。
+    </p>
   </div>
 </div>
 
