@@ -138,6 +138,9 @@ title: About
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   padding: 60px 40px;
   border-radius: 8px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .methodology-section h2 {
@@ -275,6 +278,9 @@ title: About
 .expertise-section,
 .approach-section {
   margin-bottom: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .expertise-section h2,
