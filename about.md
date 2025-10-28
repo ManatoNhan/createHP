@@ -169,6 +169,8 @@ title: About
   max-width: 600px;
   width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .methodology-grid {
@@ -239,6 +241,7 @@ title: About
   color: #7f8c8d;
   line-height: 1.8;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .methodology-strength {
